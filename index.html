@@ -18,58 +18,38 @@
   --accent: #6366f1;
   --accent-hover: #818cf8;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
+  background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden;
 }
-
 .header {
   background: linear-gradient(135deg, #1e1b4b, #312e81);
-  padding: 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 .header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; }
 .header-sub { font-size: 0.75rem; color: var(--text-sub); margin-top: 4px; }
-
 .screen { display: none; padding: 16px; padding-bottom: 100px; }
 .screen.active { display: block; }
-
 .overall-stats {
   background: linear-gradient(135deg, var(--card), #253348);
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+  border-radius: 16px; padding: 20px; margin-bottom: 20px; text-align: center;
 }
 .overall-rate {
-  font-size: 2.8rem;
-  font-weight: 800;
+  font-size: 2.8rem; font-weight: 800;
   background: linear-gradient(135deg, var(--accent), var(--teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .overall-label { font-size: 0.85rem; color: var(--text-sub); margin-top: 4px; }
 .overall-detail {
   display: flex; justify-content: center; gap: 24px;
   margin-top: 12px; font-size: 0.85rem; color: var(--text-sub);
 }
-
 .section-title {
   font-size: 1rem; font-weight: 700; margin: 24px 0 12px;
   display: flex; align-items: center; gap: 8px;
 }
-
 .chapter-card {
   background: var(--card); border-radius: 12px; padding: 16px;
   margin-bottom: 12px; border-left: 4px solid transparent; transition: transform 0.15s;
@@ -79,7 +59,6 @@ body {
 .chapter-card.good { border-left-color: var(--teal); }
 .chapter-card.needs-work { border-left-color: var(--orange); }
 .chapter-card.weak { border-left-color: var(--red); }
-
 .chapter-header {
   display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
 }
@@ -89,9 +68,7 @@ body {
 .chapter-card.good .chapter-rate { color: var(--teal); }
 .chapter-card.needs-work .chapter-rate { color: var(--orange); }
 .chapter-card.weak .chapter-rate { color: var(--red); }
-
 .chapter-detail { font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; }
-
 .progress-bar {
   width: 100%; height: 6px; background: rgba(255,255,255,0.1);
   border-radius: 3px; overflow: hidden;
@@ -101,7 +78,6 @@ body {
 .chapter-card.good .progress-fill { background: var(--teal); }
 .chapter-card.needs-work .progress-fill { background: var(--orange); }
 .chapter-card.weak .progress-fill { background: var(--red); }
-
 .badge {
   display: inline-block; font-size: 0.65rem; font-weight: 700;
   padding: 2px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle;
@@ -110,7 +86,6 @@ body {
 .badge.good { background: rgba(6,182,212,0.2); color: var(--teal); }
 .badge.needs-work { background: rgba(245,158,11,0.2); color: var(--orange); }
 .badge.weak { background: rgba(239,68,68,0.2); color: var(--red); }
-
 .chapter-select-card {
   background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 10px;
   display: flex; justify-content: space-between; align-items: center;
@@ -120,12 +95,10 @@ body {
 .chapter-select-info h3 { font-size: 0.9rem; font-weight: 600; }
 .chapter-select-info p { font-size: 0.75rem; color: var(--text-sub); margin-top: 2px; }
 .chapter-select-arrow { color: var(--text-sub); font-size: 1.2rem; }
-
 .quiz-progress { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
 .quiz-progress-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; }
 .quiz-progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
 .quiz-progress-text { font-size: 0.8rem; color: var(--text-sub); white-space: nowrap; }
-
 .question-card {
   background: var(--card); border-radius: 16px; padding: 24px 20px; margin-bottom: 16px;
 }
@@ -136,7 +109,6 @@ body {
   border-radius: 8px; margin-top: 8px;
   background: rgba(245,158,11,0.2); color: var(--orange);
 }
-
 .choices { display: flex; flex-direction: column; gap: 10px; }
 .choice-btn {
   background: var(--card); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px;
@@ -145,7 +117,6 @@ body {
   display: flex; align-items: flex-start; gap: 10px;
 }
 .choice-btn:active { transform: scale(0.98); }
-.choice-btn:hover { border-color: var(--accent); }
 .choice-btn.selected { border-color: var(--accent); background: rgba(99,102,241,0.15); }
 .choice-btn.selected .choice-label { background: var(--accent); color: #fff; }
 .choice-label {
@@ -154,45 +125,34 @@ body {
   font-size: 0.8rem; font-weight: 700; flex-shrink: 0;
 }
 .choice-text { padding-top: 3px; }
-
 .choice-btn.correct { border-color: var(--green); background: rgba(16,185,129,0.15); }
 .choice-btn.correct .choice-label { background: var(--green); color: #fff; }
 .choice-btn.incorrect { border-color: var(--red); background: rgba(239,68,68,0.15); }
 .choice-btn.incorrect .choice-label { background: var(--red); color: #fff; }
 .choice-btn.show-correct { border-color: var(--green); background: rgba(16,185,129,0.1); }
-
 .submit-btn {
   width: 100%; padding: 14px; border-radius: 12px; border: none;
   font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 16px;
-  background: var(--accent); color: #fff; transition: all 0.15s;
-  display: none;
+  background: var(--accent); color: #fff; transition: all 0.15s; display: none;
 }
 .submit-btn.show { display: block; }
-.submit-btn:hover { background: var(--accent-hover); }
 .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-.result-box {
-  margin-top: 16px; padding: 16px; border-radius: 12px; display: none;
-}
+.result-box { margin-top: 16px; padding: 16px; border-radius: 12px; display: none; }
 .result-box.show { display: block; }
 .result-box.correct-result { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); }
 .result-box.incorrect-result { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); }
 .result-icon { font-size: 1.5rem; margin-bottom: 8px; }
 .result-explanation { font-size: 0.85rem; line-height: 1.6; color: var(--text-sub); margin-top: 8px; }
-
 .next-btn, .copy-btn {
   width: 100%; padding: 14px; border-radius: 12px; border: none;
   font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 12px; transition: all 0.15s;
 }
 .next-btn { background: var(--accent); color: #fff; }
-.next-btn:hover { background: var(--accent-hover); }
 .copy-btn {
   background: rgba(255,255,255,0.1); color: var(--text);
   border: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem;
 }
-.copy-btn:active { background: rgba(255,255,255,0.2); }
 .copy-btn.copied { background: rgba(16,185,129,0.2); border-color: var(--green); color: var(--green); }
-
 .summary-hero { text-align: center; padding: 40px 20px; }
 .summary-score { font-size: 4rem; font-weight: 800; }
 .summary-score.great { color: var(--green); }
@@ -204,7 +164,6 @@ body {
 .summary-detail-item { text-align: center; }
 .summary-detail-num { font-size: 1.5rem; font-weight: 700; }
 .summary-detail-label { font-size: 0.75rem; color: var(--text-sub); }
-
 .summary-q-item {
   background: var(--card); border-radius: 12px; padding: 14px 16px;
   margin-bottom: 8px; display: flex; align-items: flex-start; gap: 12px;
@@ -214,37 +173,29 @@ body {
 .summary-q-copy {
   background: none; border: 1px solid rgba(255,255,255,0.2); color: var(--text-sub);
   font-size: 0.7rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;
-  white-space: nowrap; flex-shrink: 0; transition: all 0.15s;
+  white-space: nowrap; flex-shrink: 0;
 }
-.summary-q-copy:active { background: rgba(16,185,129,0.2); border-color: var(--green); color: var(--green); }
-
 .action-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
 .btn-primary {
   background: var(--accent); color: #fff; border: none; padding: 16px;
-  border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.15s;
+  border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer;
 }
-.btn-primary:hover { background: var(--accent-hover); }
 .btn-secondary {
   background: rgba(255,255,255,0.08); color: var(--text);
   border: 1px solid rgba(255,255,255,0.15); padding: 14px; border-radius: 12px;
-  font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.15s;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer;
 }
-.btn-secondary:hover { background: rgba(255,255,255,0.12); }
-
 .mode-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
 .mode-card {
   background: var(--card); border-radius: 12px; padding: 20px; cursor: pointer;
   border: 2px solid transparent; transition: all 0.15s;
 }
-.mode-card:hover { border-color: var(--accent); }
 .mode-card:active { transform: scale(0.98); }
 .mode-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
 .mode-card p { font-size: 0.8rem; color: var(--text-sub); line-height: 1.4; }
-
 .no-data { text-align: center; padding: 40px 20px; color: var(--text-sub); }
 .no-data-icon { font-size: 3rem; margin-bottom: 12px; }
 .no-data p { font-size: 0.9rem; line-height: 1.6; }
-
 .toast {
   position: fixed; bottom: 30px; left: 50%;
   transform: translateX(-50%) translateY(100px);
@@ -254,20 +205,16 @@ body {
   transition: transform 0.3s ease; pointer-events: none;
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .fade-in { animation: fadeIn 0.3s ease forwards; }
-
 .reset-area { margin-top: 40px; text-align: center; }
 .reset-btn {
   background: none; border: 1px solid rgba(239,68,68,0.3); color: var(--red);
   padding: 10px 20px; border-radius: 8px; font-size: 0.8rem; cursor: pointer;
 }
-.reset-btn:hover { background: rgba(239,68,68,0.1); }
-
 .overlay {
   display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
   z-index: 300; align-items: center; justify-content: center;
@@ -286,27 +233,14 @@ body {
 }
 .dialog-cancel { background: rgba(255,255,255,0.1); color: var(--text); }
 .dialog-confirm { background: var(--red); color: #fff; }
-
-.loading {
-  text-align: center; padding: 60px 20px; color: var(--text-sub);
-}
-.loading-spinner {
-  width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.1);
-  border-top-color: var(--accent); border-radius: 50%;
-  animation: spin 0.8s linear infinite; margin: 0 auto 16px;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
-
 <div class="header">
   <h1>G検定 学習アプリ</h1>
   <div class="header-sub">JDLA Deep Learning for GENERAL</div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <div class="overlay" id="resetOverlay">
   <div class="dialog">
     <h3>データをリセット</h3>
@@ -317,7 +251,6 @@ body {
     </div>
   </div>
 </div>
-
 <div class="screen active" id="topScreen">
   <div id="overallStats"></div>
   <div id="chapterAnalysis"></div>
@@ -340,18 +273,16 @@ body {
     <button class="reset-btn" onclick="showResetDialog()">学習データをリセット</button>
   </div>
 </div>
-
 <div class="screen" id="chapterSelectScreen">
   <div class="section-title">
-    <span onclick="goTop()" style="cursor:pointer;">←</span>
+    <span onclick="goTop()" style="cursor:pointer;">← </span>
     章を選択
   </div>
   <div id="chapterList"></div>
 </div>
-
 <div class="screen" id="quizScreen">
   <div class="quiz-progress">
-    <span onclick="confirmQuit()" style="cursor:pointer;font-size:1.2rem;">←</span>
+    <span onclick="confirmQuit()" style="cursor:pointer;font-size:1.2rem;">← </span>
     <div class="quiz-progress-bar">
       <div class="quiz-progress-fill" id="quizProgressFill"></div>
     </div>
@@ -359,174 +290,203 @@ body {
   </div>
   <div id="quizContent"></div>
 </div>
-
 <div class="screen" id="summaryScreen">
   <div id="summaryContent"></div>
 </div>
 
-<!-- 外部問題データ読み込み -->
-<script src="questions.js"></script>
-
 <script>
-// ===== questions.js が読み込めなかった場合のフォールバック =====
-if (typeof QUESTIONS === 'undefined') {
-  var QUESTIONS = [
-    {
-      id: 1, chapter: 1, chapterName: "人工知能（AI）とは",
-      question: "サンプル問題：第1次AIブーム（1950年代後半〜1960年代）の中心技術として最も適切なものはどれか。",
-      choices: ["知識表現とエキスパートシステム", "推論と探索", "機械学習とディープラーニング", "生成AIと大規模言語モデル"],
-      correct: [1],
-      explanation: "第1次AIブームでは「推論・探索」が中心技術でした。これはサンプル問題です。questions.jsに問題データを追加してください。"
-    }
-  ];
-}
+// ===== 問題データ（ここを差し替えるだけでOK） =====
+var QUESTIONS = [
+  {
+    "id": 1,
+    "chapter": 1,
+    "chapterName": "人工知能（AI）とは",
+    "question": "第1次AIブーム（1950年代後半〜1960年代）の中心技術として最も適切なものはどれか。",
+    "choices": ["知識表現とエキスパートシステム", "推論と探索", "機械学習とディープラーニング", "生成AIと大規模言語モデル"],
+    "correct": [1],
+    "explanation": "第1次AIブームでは「推論・探索」が中心技術でした。迷路問題やパズルの解法が研究されましたが、トイ・プロブレム（簡略化された問題）しか解けないという限界がありました。"
+  },
+  {
+    "id": 2,
+    "chapter": 1,
+    "chapterName": "人工知能（AI）とは",
+    "question": "「AIが新たな成果を達成すると、その原理が解明された瞬間に『それは真の知能ではない』と見なされる心理現象」を何と呼ぶか。",
+    "choices": ["フレーム問題", "シンボルグラウンディング問題", "AI効果", "中国語の部屋"],
+    "correct": [2],
+    "explanation": "AI効果とは、AIが何かを達成しても「それは本当の知能ではない」と評価が変わる現象です。チェスや将棋AIでも見られました。"
+  },
+  {
+    "id": 3,
+    "chapter": 6,
+    "chapterName": "生成AI",
+    "question": "LLM（大規模言語モデル）が事実と異なる情報をもっともらしく生成する現象を何と呼ぶか。",
+    "choices": ["過学習", "バイアス", "ハルシネーション", "ドリフト"],
+    "correct": [2],
+    "explanation": "ハルシネーション（Hallucination）は、LLMが事実に基づかない情報をもっともらしく生成してしまう現象です。LLMの重要な課題の一つです。"
+  },
+  {
+    "id": 4,
+    "chapter": 3,
+    "chapterName": "機械学習の具体的手法",
+    "question": "モデルを学習する過程で、適切なパラメータの調整が行われないとどのような問題が生じる可能性があるか、次の選択肢から正しいものを全て選べ。",
+    "choices": ["実行ごとに結果が変化してしまう", "モデルが未知のデータに対して一般化できない", "学習が不安定になり結果が不規則", "プログラムが異常終了しやすくなる", "AIを利用活用する場合はBPRは必須となる"],
+    "correct": [1, 2],
+    "explanation": "選択肢2: モデルが未知のデータに対して一般化できない、選択肢3: 学習が不安定になり結果が不規則が正解です。適切なパラメータ調整が行われないと、過学習や学習の不安定化が起こります。"
+  },
+  {
+    "id": 5,
+    "chapter": 9,
+    "chapterName": "AI法律・倫理・社会問題",
+    "question": "EU AI規制法（AI Act）で採用されているアプローチはどれか。",
+    "choices": ["すべてのAIを一律に規制する", "リスクベースのアプローチで段階的に規制する", "AI開発を全面的に禁止する", "企業の自主規制に完全に委ねる"],
+    "correct": [1],
+    "explanation": "EU AI規制法はリスクベースのアプローチを採用し、許容できないリスク（禁止）、ハイリスク（厳格な要件）、限定リスク（透明性義務）、最小リスク（規制なし）の4段階で規制します。"
+  }
+];
 
-// ===== CHAPTERS（問題データから自動生成） =====
+// ===== CHAPTERS =====
 function getChapters() {
-  const chapters = {};
-  QUESTIONS.forEach(q => {
+  var chapters = {};
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    var q = QUESTIONS[i];
     if (!chapters[q.chapter]) chapters[q.chapter] = q.chapterName;
-  });
+  }
   return chapters;
 }
 
-const LABELS = ['A','B','C','D','E','F','G','H'];
-
-// ===== STATE =====
-let progress = loadProgress();
-let currentQuiz = [];
-let currentIndex = 0;
-let quizResults = [];
-let currentMode = 'normal';
-let selectedChoices = new Set();
-let isMultiSelect = false;
+var LABELS = ['A','B','C','D','E','F','G','H'];
+var progress = loadProgress();
+var currentQuiz = [];
+var currentIndex = 0;
+var quizResults = [];
+var currentMode = 'normal';
+var selectedChoices = [];
+var isMultiSelect = false;
 
 function loadProgress() {
   try {
-    const data = localStorage.getItem('gTestProgress');
+    var data = localStorage.getItem('gTestProgress');
     return data ? JSON.parse(data) : {};
-  } catch { return {}; }
+  } catch(e) { return {}; }
 }
 function saveProgress() {
   localStorage.setItem('gTestProgress', JSON.stringify(progress));
 }
 
-// ===== NAVIGATION =====
 function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  var screens = document.querySelectorAll('.screen');
+  for (var i = 0; i < screens.length; i++) screens[i].classList.remove('active');
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
 function goTop() { renderTop(); showScreen('topScreen'); }
 
-// ===== TOP SCREEN =====
 function renderTop() { renderOverallStats(); renderChapterAnalysis(); }
 
 function renderOverallStats() {
-  const el = document.getElementById('overallStats');
-  const allAnswered = Object.keys(progress);
+  var el = document.getElementById('overallStats');
+  var allAnswered = Object.keys(progress);
   if (allAnswered.length === 0) {
-    el.innerHTML = `
-      <div class="no-data fade-in">
-        <div class="no-data-icon">📚</div>
-        <p>まだ問題を解いていません。<br>下のメニューから学習を始めましょう！<br><br>
-        <span style="font-size:0.75rem;color:var(--text-sub)">全${QUESTIONS.length}問収録</span></p>
-      </div>`;
+    el.innerHTML = '<div class="no-data fade-in"><div class="no-data-icon">📚</div><p>まだ問題を解いていません。<br>下のメニューから学習を始めましょう！<br><br><span style="font-size:0.75rem;color:var(--text-sub)">全' + QUESTIONS.length + '問収録</span></p></div>';
     return;
   }
-  let totalCorrect = 0, totalCount = 0;
-  allAnswered.forEach(qid => { totalCount++; if (progress[qid].correct) totalCorrect++; });
-  const rate = Math.round((totalCorrect / totalCount) * 100);
-  el.innerHTML = `
-    <div class="overall-stats fade-in">
-      <div class="overall-rate">${rate}%</div>
-      <div class="overall-label">全体正答率</div>
-      <div class="overall-detail">
-        <span>正解 ${totalCorrect}問</span>
-        <span>不正解 ${totalCount - totalCorrect}問</span>
-        <span>合計 ${totalCount}/${QUESTIONS.length}問</span>
-      </div>
-    </div>`;
+  var totalCorrect = 0, totalCount = 0;
+  for (var i = 0; i < allAnswered.length; i++) {
+    totalCount++;
+    if (progress[allAnswered[i]].correct) totalCorrect++;
+  }
+  var rate = Math.round((totalCorrect / totalCount) * 100);
+  el.innerHTML = '<div class="overall-stats fade-in"><div class="overall-rate">' + rate + '%</div><div class="overall-label">全体正答率</div><div class="overall-detail"><span>正解 ' + totalCorrect + '問</span><span>不正解 ' + (totalCount - totalCorrect) + '問</span><span>合計 ' + totalCount + '/' + QUESTIONS.length + '問</span></div></div>';
 }
 
 function renderChapterAnalysis() {
-  const el = document.getElementById('chapterAnalysis');
-  const allAnswered = Object.keys(progress);
+  var el = document.getElementById('chapterAnalysis');
+  var allAnswered = Object.keys(progress);
   if (allAnswered.length === 0) { el.innerHTML = ''; return; }
-
-  const stats = {};
-  allAnswered.forEach(qid => {
-    const q = QUESTIONS.find(q => q.id === parseInt(qid));
-    if (!q) return;
-    const ch = q.chapter;
+  var stats = {};
+  for (var i = 0; i < allAnswered.length; i++) {
+    var qid = allAnswered[i];
+    var q = null;
+    for (var j = 0; j < QUESTIONS.length; j++) {
+      if (QUESTIONS[j].id === parseInt(qid)) { q = QUESTIONS[j]; break; }
+    }
+    if (!q) continue;
+    var ch = q.chapter;
     if (!stats[ch]) stats[ch] = { total: 0, correct: 0, incorrect: 0, name: q.chapterName };
     stats[ch].total++;
     if (progress[qid].correct) stats[ch].correct++;
     else stats[ch].incorrect++;
-  });
-
-  const sorted = Object.entries(stats).map(([ch, s]) => {
-    s.rate = Math.round((s.correct / s.total) * 100);
-    s.chapter = ch;
-    return s;
-  }).sort((a, b) => a.rate - b.rate);
-
-  let html = '<div class="section-title">章別分析（苦手順）</div>';
-  sorted.forEach((s, i) => {
-    const cls = s.rate >= 80 ? 'excellent' : s.rate >= 60 ? 'good' : s.rate >= 40 ? 'needs-work' : 'weak';
-    const label = s.rate >= 80 ? '優秀' : s.rate >= 60 ? '良好' : s.rate >= 40 ? '要改善' : '苦手';
-    const chapterTotal = QUESTIONS.filter(q => q.chapter === parseInt(s.chapter)).length;
-    html += `
-      <div class="chapter-card ${cls} fade-in" style="animation-delay:${i*0.05}s">
-        <div class="chapter-header">
-          <div class="chapter-name">第${s.chapter}章: ${s.name}<span class="badge ${cls}">${label}</span></div>
-          <div class="chapter-rate">${s.rate}%</div>
-        </div>
-        <div class="chapter-detail">正解: ${s.correct}問　不正解: ${s.incorrect}問　（${s.total}/${chapterTotal}問 回答済）</div>
-        <div class="progress-bar"><div class="progress-fill" style="width:${s.rate}%"></div></div>
-      </div>`;
-  });
+  }
+  var entries = [];
+  for (var key in stats) {
+    stats[key].rate = Math.round((stats[key].correct / stats[key].total) * 100);
+    stats[key].chapter = key;
+    entries.push(stats[key]);
+  }
+  entries.sort(function(a, b) { return a.rate - b.rate; });
+  var html = '<div class="section-title">章別分析（苦手順）</div>';
+  for (var i = 0; i < entries.length; i++) {
+    var s = entries[i];
+    var cls = s.rate >= 80 ? 'excellent' : s.rate >= 60 ? 'good' : s.rate >= 40 ? 'needs-work' : 'weak';
+    var label = s.rate >= 80 ? '優秀' : s.rate >= 60 ? '良好' : s.rate >= 40 ? '要改善' : '苦手';
+    var chapterTotal = 0;
+    for (var j = 0; j < QUESTIONS.length; j++) {
+      if (QUESTIONS[j].chapter === parseInt(s.chapter)) chapterTotal++;
+    }
+    html += '<div class="chapter-card ' + cls + ' fade-in"><div class="chapter-header"><div class="chapter-name">第' + s.chapter + '章: ' + s.name + '<span class="badge ' + cls + '">' + label + '</span></div><div class="chapter-rate">' + s.rate + '%</div></div><div class="chapter-detail">正解: ' + s.correct + '問　不正解: ' + s.incorrect + '問　（' + s.total + '/' + chapterTotal + '問 回答済）</div><div class="progress-bar"><div class="progress-fill" style="width:' + s.rate + '%"></div></div></div>';
+  }
   el.innerHTML = html;
 }
 
-// ===== CHAPTER SELECT =====
 function showChapterSelect(mode) {
   currentMode = mode;
   if (mode === 'all') { startQuiz(QUESTIONS.slice()); return; }
-  const el = document.getElementById('chapterList');
-  const chapters = getChapters();
-  let html = '';
-  Object.entries(chapters).forEach(([ch, name]) => {
-    const qs = QUESTIONS.filter(q => q.chapter === parseInt(ch));
-    const answered = qs.filter(q => progress[q.id]).length;
-    html += `
-      <div class="chapter-select-card fade-in" onclick="startChapterQuiz(${ch})">
-        <div class="chapter-select-info">
-          <h3>第${ch}章: ${name}</h3>
-          <p>${qs.length}問（${answered}問 回答済）</p>
-        </div>
-        <div class="chapter-select-arrow">›</div>
-      </div>`;
-  });
+  var el = document.getElementById('chapterList');
+  var chapters = getChapters();
+  var html = '';
+  var keys = Object.keys(chapters);
+  for (var i = 0; i < keys.length; i++) {
+    var ch = keys[i];
+    var name = chapters[ch];
+    var count = 0, answered = 0;
+    for (var j = 0; j < QUESTIONS.length; j++) {
+      if (QUESTIONS[j].chapter === parseInt(ch)) {
+        count++;
+        if (progress[QUESTIONS[j].id]) answered++;
+      }
+    }
+    html += '<div class="chapter-select-card fade-in" onclick="startChapterQuiz(' + ch + ')"><div class="chapter-select-info"><h3>第' + ch + '章: ' + name + '</h3><p>' + count + '問（' + answered + '問 回答済）</p></div><div class="chapter-select-arrow">›</div></div>';
+  }
   el.innerHTML = html;
   showScreen('chapterSelectScreen');
 }
 
 function startChapterQuiz(chapter) {
-  startQuiz(QUESTIONS.filter(q => q.chapter === chapter));
+  var qs = [];
+  for (var i = 0; i < QUESTIONS.length; i++) {
+    if (QUESTIONS[i].chapter === chapter) qs.push(QUESTIONS[i]);
+  }
+  startQuiz(qs);
 }
 
 function startReviewMode() {
-  const wrongIds = Object.entries(progress).filter(([_,v]) => !v.correct).map(([id,_]) => parseInt(id));
-  const qs = QUESTIONS.filter(q => wrongIds.includes(q.id));
+  var qs = [];
+  var keys = Object.keys(progress);
+  for (var i = 0; i < keys.length; i++) {
+    if (!progress[keys[i]].correct) {
+      var id = parseInt(keys[i]);
+      for (var j = 0; j < QUESTIONS.length; j++) {
+        if (QUESTIONS[j].id === id) { qs.push(QUESTIONS[j]); break; }
+      }
+    }
+  }
   if (qs.length === 0) { showToast('復習する問題がありません'); return; }
   currentMode = 'review';
   startQuiz(qs);
 }
 
-// ===== QUIZ =====
 function startQuiz(questions) {
-  currentQuiz = questions.sort(() => Math.random() - 0.5);
+  currentQuiz = questions.sort(function() { return Math.random() - 0.5; });
   currentIndex = 0;
   quizResults = [];
   showScreen('quizScreen');
@@ -534,101 +494,79 @@ function startQuiz(questions) {
 }
 
 function renderQuestion() {
-  const q = currentQuiz[currentIndex];
-  const total = currentQuiz.length;
-  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  var q = currentQuiz[currentIndex];
+  var total = currentQuiz.length;
+  var correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
   isMultiSelect = correctArr.length > 1;
-  selectedChoices = new Set();
+  selectedChoices = [];
 
-  document.getElementById('quizProgressFill').style.width = `${(currentIndex/total)*100}%`;
-  document.getElementById('quizProgressText').textContent = `${currentIndex+1}/${total}`;
+  document.getElementById('quizProgressFill').style.width = ((currentIndex / total) * 100) + '%';
+  document.getElementById('quizProgressText').textContent = (currentIndex + 1) + '/' + total;
 
-  let choicesHtml = '';
-  q.choices.forEach((c, i) => {
-    choicesHtml += `
-      <button class="choice-btn" id="choice${i}" onclick="${isMultiSelect ? `toggleChoice(${i})` : `selectSingleAnswer(${i})`}">
-        <span class="choice-label">${LABELS[i]}</span>
-        <span class="choice-text">${c}</span>
-      </button>`;
-  });
-
-  const typeTag = isMultiSelect ? `<div class="question-type">複数選択（${correctArr.length}つ選択）</div>` : '';
-
-  document.getElementById('quizContent').innerHTML = `
-    <div class="question-card fade-in">
-      <div class="question-number">第${q.chapter}章: ${q.chapterName}</div>
-      <div class="question-text">${q.question}</div>
-      ${typeTag}
-    </div>
-    <div class="choices fade-in" style="animation-delay:0.1s">${choicesHtml}</div>
-    <button class="submit-btn" id="submitBtn" onclick="submitMultiAnswer()" disabled>回答を確定する</button>
-    <div class="result-box" id="resultBox">
-      <div class="result-icon" id="resultIcon"></div>
-      <div class="result-explanation" id="resultExplanation"></div>
-      <button class="copy-btn" id="copyBtn" onclick="copyQuestion()">問題と解説をコピー（AI壁打ち用）</button>
-      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">次の問題へ</button>
-    </div>`;
-
-  if (isMultiSelect) {
-    document.getElementById('submitBtn').classList.add('show');
+  var choicesHtml = '';
+  for (var i = 0; i < q.choices.length; i++) {
+    if (isMultiSelect) {
+      choicesHtml += '<button class="choice-btn" id="choice' + i + '" onclick="toggleChoice(' + i + ')"><span class="choice-label">' + LABELS[i] + '</span><span class="choice-text">' + q.choices[i] + '</span></button>';
+    } else {
+      choicesHtml += '<button class="choice-btn" id="choice' + i + '" onclick="selectSingleAnswer(' + i + ')"><span class="choice-label">' + LABELS[i] + '</span><span class="choice-text">' + q.choices[i] + '</span></button>';
+    }
   }
+
+  var typeTag = isMultiSelect ? '<div class="question-type">複数選択（' + correctArr.length + 'つ選択）</div>' : '';
+
+  document.getElementById('quizContent').innerHTML = '<div class="question-card fade-in"><div class="question-number">第' + q.chapter + '章: ' + q.chapterName + '</div><div class="question-text">' + q.question + '</div>' + typeTag + '</div><div class="choices fade-in">' + choicesHtml + '</div><button class="submit-btn' + (isMultiSelect ? ' show' : '') + '" id="submitBtn" onclick="submitMultiAnswer()" disabled>回答を確定する</button><div class="result-box" id="resultBox"><div class="result-icon" id="resultIcon"></div><div class="result-explanation" id="resultExplanation"></div><button class="copy-btn" id="copyBtn" onclick="copyQuestion()">問題と解説をコピー（AI壁打ち用）</button><button class="next-btn" id="nextBtn" onclick="nextQuestion()">次の問題へ</button></div>';
 }
 
-// 単一選択
 function selectSingleAnswer(selected) {
-  selectedChoices = new Set([selected]);
+  selectedChoices = [selected];
   evaluateAnswer();
 }
 
-// 複数選択のトグル
 function toggleChoice(idx) {
-  const btn = document.getElementById('choice' + idx);
-  if (selectedChoices.has(idx)) {
-    selectedChoices.delete(idx);
+  var btn = document.getElementById('choice' + idx);
+  var pos = selectedChoices.indexOf(idx);
+  if (pos > -1) {
+    selectedChoices.splice(pos, 1);
     btn.classList.remove('selected');
   } else {
-    selectedChoices.add(idx);
+    selectedChoices.push(idx);
     btn.classList.add('selected');
   }
-  const submitBtn = document.getElementById('submitBtn');
-  submitBtn.disabled = selectedChoices.size === 0;
+  document.getElementById('submitBtn').disabled = selectedChoices.length === 0;
 }
 
-// 複数選択の確定
 function submitMultiAnswer() {
   evaluateAnswer();
 }
 
-// 回答評価
 function evaluateAnswer() {
-  const q = currentQuiz[currentIndex];
-  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
-  const selectedArr = Array.from(selectedChoices).sort();
-  const correctSorted = correctArr.slice().sort();
-  const isCorrect = JSON.stringify(selectedArr) === JSON.stringify(correctSorted);
+  var q = currentQuiz[currentIndex];
+  var correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  var selectedArr = selectedChoices.slice().sort(function(a,b){return a-b;});
+  var correctSorted = correctArr.slice().sort(function(a,b){return a-b;});
+  var isCorrect = JSON.stringify(selectedArr) === JSON.stringify(correctSorted);
 
   progress[q.id] = { correct: isCorrect, lastAnswered: Date.now() };
   saveProgress();
-  quizResults.push({ question: q, selected: selectedArr, isCorrect });
+  quizResults.push({ question: q, selected: selectedArr, isCorrect: isCorrect });
 
-  // ボタンの状態更新
-  if (document.getElementById('submitBtn')) {
-    document.getElementById('submitBtn').style.display = 'none';
+  var submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) submitBtn.style.display = 'none';
+
+  var btns = document.querySelectorAll('.choice-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = null;
+    btns[i].style.cursor = 'default';
+    if (correctArr.indexOf(i) > -1) {
+      btns[i].classList.remove('selected');
+      btns[i].classList.add(selectedArr.indexOf(i) > -1 ? 'correct' : 'show-correct');
+    } else if (selectedArr.indexOf(i) > -1) {
+      btns[i].classList.remove('selected');
+      btns[i].classList.add('incorrect');
+    }
   }
 
-  document.querySelectorAll('.choice-btn').forEach((btn, i) => {
-    btn.onclick = null;
-    btn.style.cursor = 'default';
-    if (correctArr.includes(i)) {
-      btn.classList.remove('selected');
-      btn.classList.add(selectedArr.includes(i) ? 'correct' : 'show-correct');
-    } else if (selectedArr.includes(i)) {
-      btn.classList.remove('selected');
-      btn.classList.add('incorrect');
-    }
-  });
-
-  const box = document.getElementById('resultBox');
+  var box = document.getElementById('resultBox');
   box.classList.add('show');
   box.classList.add(isCorrect ? 'correct-result' : 'incorrect-result');
   document.getElementById('resultIcon').textContent = isCorrect ? '⭕ 正解！' : '❌ 不正解';
@@ -646,37 +584,30 @@ function nextQuestion() {
 }
 
 function copyQuestion() {
-  const q = currentQuiz[currentIndex];
-  const r = quizResults[quizResults.length - 1];
-  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
-  const text = `【G検定 問題】
-第${q.chapter}章: ${q.chapterName}
+  var q = currentQuiz[currentIndex];
+  var r = quizResults[quizResults.length - 1];
+  var correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  var correctStrs = [];
+  for (var i = 0; i < correctArr.length; i++) correctStrs.push(LABELS[correctArr[i]] + '. ' + q.choices[correctArr[i]]);
+  var selectedStrs = [];
+  for (var i = 0; i < r.selected.length; i++) selectedStrs.push(LABELS[r.selected[i]] + '. ' + q.choices[r.selected[i]]);
+  var choiceLines = [];
+  for (var i = 0; i < q.choices.length; i++) choiceLines.push(LABELS[i] + '. ' + q.choices[i]);
 
-■ 問題
-${q.question}
+  var text = '【G検定 問題】\n第' + q.chapter + '章: ' + q.chapterName + '\n\n■ 問題\n' + q.question + '\n\n■ 選択肢\n' + choiceLines.join('\n') + '\n\n■ 正解: ' + correctStrs.join(', ') + '\n■ 自分の回答: ' + selectedStrs.join(', ') + '\n\n■ 解説\n' + q.explanation + '\n\n---\nこの問題についてさらに深く理解したいです。関連する概念や実務での応用について教えてください。';
 
-■ 選択肢
-${q.choices.map((c,i) => `${LABELS[i]}. ${c}`).join('\n')}
-
-■ 正解: ${correctArr.map(i => LABELS[i]+'. '+q.choices[i]).join(', ')}
-■ 自分の回答: ${r.selected.map(i => LABELS[i]+'. '+q.choices[i]).join(', ')}
-
-■ 解説
-${q.explanation}
-
----
-この問題についてさらに深く理解したいです。関連する概念や実務での応用について教えてください。`;
-
-  navigator.clipboard.writeText(text).then(() => {
-    document.getElementById('copyBtn').textContent = 'コピーしました！';
-    document.getElementById('copyBtn').classList.add('copied');
-    showToast('クリップボードにコピーしました');
-  }).catch(() => {
+  try {
+    navigator.clipboard.writeText(text).then(function() {
+      document.getElementById('copyBtn').textContent = 'コピーしました！';
+      document.getElementById('copyBtn').classList.add('copied');
+      showToast('クリップボードにコピーしました');
+    });
+  } catch(e) {
     fallbackCopy(text);
     document.getElementById('copyBtn').textContent = 'コピーしました！';
     document.getElementById('copyBtn').classList.add('copied');
     showToast('コピーしました');
-  });
+  }
 }
 
 function confirmQuit() {
@@ -685,130 +616,90 @@ function confirmQuit() {
   } else goTop();
 }
 
-// ===== SUMMARY =====
 function showSummary() {
   showScreen('summaryScreen');
-  const total = quizResults.length;
-  const correct = quizResults.filter(r => r.isCorrect).length;
-  const rate = Math.round((correct/total)*100);
-  const cls = rate>=80?'great':rate>=60?'good':rate>=40?'needs-work':'poor';
-  const wrongResults = quizResults.filter(r => !r.isCorrect);
+  var total = quizResults.length;
+  var correct = 0;
+  for (var i = 0; i < quizResults.length; i++) { if (quizResults[i].isCorrect) correct++; }
+  var rate = Math.round((correct / total) * 100);
+  var cls = rate >= 80 ? 'great' : rate >= 60 ? 'good' : rate >= 40 ? 'needs-work' : 'poor';
+  var wrongResults = [];
+  for (var i = 0; i < quizResults.length; i++) { if (!quizResults[i].isCorrect) wrongResults.push(quizResults[i]); }
 
-  let wrongHtml = '';
+  var wrongHtml = '';
   if (wrongResults.length > 0) {
     wrongHtml = '<div class="section-title" style="margin-top:32px">間違えた問題</div>';
-    wrongResults.forEach((r,i) => {
-      const q = r.question;
-      wrongHtml += `
-        <div class="summary-q-item fade-in" style="animation-delay:${i*0.05}s">
-          <div class="summary-q-icon">❌</div>
-          <div class="summary-q-text"><strong>第${q.chapter}章</strong> ${q.question.substring(0,60)}...</div>
-          <button class="summary-q-copy" onclick="copySummaryQuestion(${quizResults.indexOf(r)})">コピー</button>
-        </div>`;
-    });
+    for (var i = 0; i < wrongResults.length; i++) {
+      var q = wrongResults[i].question;
+      var idx = quizResults.indexOf(wrongResults[i]);
+      wrongHtml += '<div class="summary-q-item fade-in"><div class="summary-q-icon">❌</div><div class="summary-q-text"><strong>第' + q.chapter + '章</strong> ' + q.question.substring(0, 60) + '...</div><button class="summary-q-copy" onclick="copySummaryQuestion(' + idx + ')">コピー</button></div>';
+    }
   }
 
-  document.getElementById('summaryContent').innerHTML = `
-    <div class="summary-hero fade-in">
-      <div class="summary-score ${cls}">${rate}%</div>
-      <div class="summary-label">正答率</div>
-      <div class="summary-detail">
-        <div class="summary-detail-item">
-          <div class="summary-detail-num" style="color:var(--green)">${correct}</div>
-          <div class="summary-detail-label">正解</div>
-        </div>
-        <div class="summary-detail-item">
-          <div class="summary-detail-num" style="color:var(--red)">${total-correct}</div>
-          <div class="summary-detail-label">不正解</div>
-        </div>
-        <div class="summary-detail-item">
-          <div class="summary-detail-num">${total}</div>
-          <div class="summary-detail-label">合計</div>
-        </div>
-      </div>
-    </div>
-    <div class="summary-questions">${wrongHtml}</div>
-    ${wrongResults.length>0?`<button class="btn-secondary" style="margin-top:16px" onclick="copyAllWrong()">間違えた問題をすべてコピー</button>`:''}
-    <div class="action-btns">
-      <button class="btn-primary" onclick="goTop()">トップに戻る</button>
-      ${wrongResults.length>0?'<button class="btn-secondary" onclick="retryWrong()">間違えた問題だけ再挑戦</button>':''}
-    </div>`;
+  document.getElementById('summaryContent').innerHTML = '<div class="summary-hero fade-in"><div class="summary-score ' + cls + '">' + rate + '%</div><div class="summary-label">正答率</div><div class="summary-detail"><div class="summary-detail-item"><div class="summary-detail-num" style="color:var(--green)">' + correct + '</div><div class="summary-detail-label">正解</div></div><div class="summary-detail-item"><div class="summary-detail-num" style="color:var(--red)">' + (total - correct) + '</div><div class="summary-detail-label">不正解</div></div><div class="summary-detail-item"><div class="summary-detail-num">' + total + '</div><div class="summary-detail-label">合計</div></div></div></div><div class="summary-questions">' + wrongHtml + '</div>' + (wrongResults.length > 0 ? '<button class="btn-secondary" style="margin-top:16px" onclick="copyAllWrong()">間違えた問題をすべてコピー</button>' : '') + '<div class="action-btns"><button class="btn-primary" onclick="goTop()">トップに戻る</button>' + (wrongResults.length > 0 ? '<button class="btn-secondary" onclick="retryWrong()">間違えた問題だけ再挑戦</button>' : '') + '</div>';
 }
 
 function copySummaryQuestion(idx) {
-  const r = quizResults[idx];
-  const q = r.question;
-  const correctArr = Array.isArray(q.correct)?q.correct:[q.correct];
-  const text = `【G検定 問題】
-第${q.chapter}章: ${q.chapterName}
-
-■ 問題
-${q.question}
-
-■ 選択肢
-${q.choices.map((c,i)=>`${LABELS[i]}. ${c}`).join('\n')}
-
-■ 正解: ${correctArr.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
-■ 自分の回答: ${r.selected.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
-
-■ 解説
-${q.explanation}
-
----
-この問題について、なぜ間違えたか分析し、関連する概念を教えてください。`;
-
-  navigator.clipboard.writeText(text).then(()=>showToast('コピーしました')).catch(()=>{fallbackCopy(text);showToast('コピーしました');});
+  var r = quizResults[idx];
+  var q = r.question;
+  var correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  var correctStrs = [];
+  for (var i = 0; i < correctArr.length; i++) correctStrs.push(LABELS[correctArr[i]] + '. ' + q.choices[correctArr[i]]);
+  var selectedStrs = [];
+  for (var i = 0; i < r.selected.length; i++) selectedStrs.push(LABELS[r.selected[i]] + '. ' + q.choices[r.selected[i]]);
+  var choiceLines = [];
+  for (var i = 0; i < q.choices.length; i++) choiceLines.push(LABELS[i] + '. ' + q.choices[i]);
+  var text = '【G検定 問題】\n第' + q.chapter + '章: ' + q.chapterName + '\n\n■ 問題\n' + q.question + '\n\n■ 選択肢\n' + choiceLines.join('\n') + '\n\n■ 正解: ' + correctStrs.join(', ') + '\n■ 自分の回答: ' + selectedStrs.join(', ') + '\n\n■ 解説\n' + q.explanation + '\n\n---\nこの問題について、なぜ間違えたか分析し、関連する概念を教えてください。';
+  try { navigator.clipboard.writeText(text).then(function() { showToast('コピーしました'); }); }
+  catch(e) { fallbackCopy(text); showToast('コピーしました'); }
 }
 
 function copyAllWrong() {
-  const wrongs = quizResults.filter(r=>!r.isCorrect);
-  let text = '【G検定 間違えた問題まとめ】\n\n';
-  wrongs.forEach((r,i) => {
-    const q = r.question;
-    const correctArr = Array.isArray(q.correct)?q.correct:[q.correct];
-    text += `━━━ 問題${i+1} ━━━
-第${q.chapter}章: ${q.chapterName}
-
-■ 問題
-${q.question}
-
-■ 選択肢
-${q.choices.map((c,j)=>`${LABELS[j]}. ${c}`).join('\n')}
-
-■ 正解: ${correctArr.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
-■ 自分の回答: ${r.selected.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
-
-■ 解説
-${q.explanation}
-
-`;
-  });
-  text += `---\n上記の間違えた問題について、共通する弱点パターンを分析し、効率的な復習方法を提案してください。`;
-  navigator.clipboard.writeText(text).then(()=>showToast('すべてコピーしました')).catch(()=>{fallbackCopy(text);showToast('コピーしました');});
+  var wrongs = [];
+  for (var i = 0; i < quizResults.length; i++) { if (!quizResults[i].isCorrect) wrongs.push(quizResults[i]); }
+  var text = '【G検定 間違えた問題まとめ】\n\n';
+  for (var i = 0; i < wrongs.length; i++) {
+    var q = wrongs[i].question;
+    var correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+    var correctStrs = [];
+    for (var j = 0; j < correctArr.length; j++) correctStrs.push(LABELS[correctArr[j]] + '. ' + q.choices[correctArr[j]]);
+    var selectedStrs = [];
+    for (var j = 0; j < wrongs[i].selected.length; j++) selectedStrs.push(LABELS[wrongs[i].selected[j]] + '. ' + q.choices[wrongs[i].selected[j]]);
+    var choiceLines = [];
+    for (var j = 0; j < q.choices.length; j++) choiceLines.push(LABELS[j] + '. ' + q.choices[j]);
+    text += '━━━ 問題' + (i + 1) + ' ━━━\n第' + q.chapter + '章: ' + q.chapterName + '\n\n■ 問題\n' + q.question + '\n\n■ 選択肢\n' + choiceLines.join('\n') + '\n\n■ 正解: ' + correctStrs.join(', ') + '\n■ 自分の回答: ' + selectedStrs.join(', ') + '\n\n■ 解説\n' + q.explanation + '\n\n';
+  }
+  text += '---\n上記の間違えた問題について、共通する弱点パターンを分析し、効率的な復習方法を提案してください。';
+  try { navigator.clipboard.writeText(text).then(function() { showToast('すべてコピーしました'); }); }
+  catch(e) { fallbackCopy(text); showToast('コピーしました'); }
 }
 
 function retryWrong() {
-  startQuiz(quizResults.filter(r=>!r.isCorrect).map(r=>r.question));
+  var qs = [];
+  for (var i = 0; i < quizResults.length; i++) {
+    if (!quizResults[i].isCorrect) qs.push(quizResults[i].question);
+  }
+  startQuiz(qs);
 }
 
-// ===== UTILITIES =====
 function fallbackCopy(text) {
-  const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';
-  ta.style.left='-9999px';document.body.appendChild(ta);ta.select();
-  document.execCommand('copy');document.body.removeChild(ta);
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  document.execCommand('copy'); document.body.removeChild(ta);
 }
 function showToast(msg) {
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2000);
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2000);
 }
-function showResetDialog(){document.getElementById('resetOverlay').classList.add('show');}
-function closeResetDialog(){document.getElementById('resetOverlay').classList.remove('show');}
-function confirmReset(){
-  progress={};localStorage.removeItem('gTestProgress');
-  closeResetDialog();showToast('データをリセットしました');goTop();
+function showResetDialog() { document.getElementById('resetOverlay').classList.add('show'); }
+function closeResetDialog() { document.getElementById('resetOverlay').classList.remove('show'); }
+function confirmReset() {
+  progress = {}; localStorage.removeItem('gTestProgress');
+  closeResetDialog(); showToast('データをリセットしました'); goTop();
 }
 
-// ===== INIT =====
 renderTop();
 </script>
 </body>
