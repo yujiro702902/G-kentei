@@ -29,7 +29,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
 .header {
   background: linear-gradient(135deg, #1e1b4b, #312e81);
   padding: 20px;
@@ -39,22 +38,12 @@ body {
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-.header h1 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-.header-sub {
-  font-size: 0.75rem;
-  color: var(--text-sub);
-  margin-top: 4px;
-}
+.header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; }
+.header-sub { font-size: 0.75rem; color: var(--text-sub); margin-top: 4px; }
 
-/* ===== SCREENS ===== */
 .screen { display: none; padding: 16px; padding-bottom: 100px; }
 .screen.active { display: block; }
 
-/* ===== TOP SCREEN ===== */
 .overall-stats {
   background: linear-gradient(135deg, var(--card), #253348);
   border-radius: 16px;
@@ -70,37 +59,20 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.overall-label {
-  font-size: 0.85rem;
-  color: var(--text-sub);
-  margin-top: 4px;
-}
+.overall-label { font-size: 0.85rem; color: var(--text-sub); margin-top: 4px; }
 .overall-detail {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 12px;
-  font-size: 0.85rem;
-  color: var(--text-sub);
+  display: flex; justify-content: center; gap: 24px;
+  margin-top: 12px; font-size: 0.85rem; color: var(--text-sub);
 }
 
-/* Chapter Analysis Section */
 .section-title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 24px 0 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 1rem; font-weight: 700; margin: 24px 0 12px;
+  display: flex; align-items: center; gap: 8px;
 }
 
 .chapter-card {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 12px;
-  border-left: 4px solid transparent;
-  transition: transform 0.15s;
+  background: var(--card); border-radius: 12px; padding: 16px;
+  margin-bottom: 12px; border-left: 4px solid transparent; transition: transform 0.15s;
 }
 .chapter-card:active { transform: scale(0.98); }
 .chapter-card.excellent { border-left-color: var(--green); }
@@ -109,442 +81,232 @@ body {
 .chapter-card.weak { border-left-color: var(--red); }
 
 .chapter-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
 }
-.chapter-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-  flex: 1;
-  margin-right: 12px;
-}
-.chapter-rate {
-  font-size: 1.3rem;
-  font-weight: 800;
-}
+.chapter-name { font-size: 0.9rem; font-weight: 600; flex: 1; margin-right: 12px; }
+.chapter-rate { font-size: 1.3rem; font-weight: 800; }
 .chapter-card.excellent .chapter-rate { color: var(--green); }
 .chapter-card.good .chapter-rate { color: var(--teal); }
 .chapter-card.needs-work .chapter-rate { color: var(--orange); }
 .chapter-card.weak .chapter-rate { color: var(--red); }
 
-.chapter-detail {
-  font-size: 0.75rem;
-  color: var(--text-sub);
-  margin-bottom: 8px;
-}
+.chapter-detail { font-size: 0.75rem; color: var(--text-sub); margin-bottom: 8px; }
 
 .progress-bar {
-  width: 100%;
-  height: 6px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 3px;
-  overflow: hidden;
+  width: 100%; height: 6px; background: rgba(255,255,255,0.1);
+  border-radius: 3px; overflow: hidden;
 }
-.progress-fill {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 0.5s ease;
-}
+.progress-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
 .chapter-card.excellent .progress-fill { background: var(--green); }
 .chapter-card.good .progress-fill { background: var(--teal); }
 .chapter-card.needs-work .progress-fill { background: var(--orange); }
 .chapter-card.weak .progress-fill { background: var(--red); }
 
 .badge {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 10px;
-  margin-left: 8px;
-  vertical-align: middle;
+  display: inline-block; font-size: 0.65rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle;
 }
 .badge.excellent { background: rgba(16,185,129,0.2); color: var(--green); }
 .badge.good { background: rgba(6,182,212,0.2); color: var(--teal); }
 .badge.needs-work { background: rgba(245,158,11,0.2); color: var(--orange); }
 .badge.weak { background: rgba(239,68,68,0.2); color: var(--red); }
 
-/* ===== CHAPTER SELECT ===== */
 .chapter-select-card {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  transition: background 0.15s;
+  background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; transition: background 0.15s;
 }
 .chapter-select-card:active { background: var(--card-hover); }
 .chapter-select-info h3 { font-size: 0.9rem; font-weight: 600; }
 .chapter-select-info p { font-size: 0.75rem; color: var(--text-sub); margin-top: 2px; }
 .chapter-select-arrow { color: var(--text-sub); font-size: 1.2rem; }
 
-/* ===== QUIZ SCREEN ===== */
-.quiz-progress {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.quiz-progress-bar {
-  flex: 1;
-  height: 4px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 2px;
-}
-.quiz-progress-fill {
-  height: 100%;
-  background: var(--accent);
-  border-radius: 2px;
-  transition: width 0.3s;
-}
-.quiz-progress-text {
-  font-size: 0.8rem;
-  color: var(--text-sub);
-  white-space: nowrap;
-}
+.quiz-progress { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.quiz-progress-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; }
+.quiz-progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
+.quiz-progress-text { font-size: 0.8rem; color: var(--text-sub); white-space: nowrap; }
 
 .question-card {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 24px 20px;
-  margin-bottom: 16px;
+  background: var(--card); border-radius: 16px; padding: 24px 20px; margin-bottom: 16px;
 }
-.question-number {
-  font-size: 0.75rem;
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.question-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  font-weight: 500;
+.question-number { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+.question-text { font-size: 1rem; line-height: 1.7; font-weight: 500; }
+.question-type {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 8px;
+  border-radius: 8px; margin-top: 8px;
+  background: rgba(245,158,11,0.2); color: var(--orange);
 }
 
 .choices { display: flex; flex-direction: column; gap: 10px; }
 .choice-btn {
-  background: var(--card);
-  border: 2px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 14px 16px;
-  color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.15s;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  background: var(--card); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px;
+  padding: 14px 16px; color: var(--text); font-size: 0.9rem; line-height: 1.5;
+  text-align: left; cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: flex-start; gap: 10px;
 }
 .choice-btn:active { transform: scale(0.98); }
 .choice-btn:hover { border-color: var(--accent); }
+.choice-btn.selected { border-color: var(--accent); background: rgba(99,102,241,0.15); }
+.choice-btn.selected .choice-label { background: var(--accent); color: #fff; }
 .choice-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  font-size: 0.8rem;
-  font-weight: 700;
-  flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1);
+  font-size: 0.8rem; font-weight: 700; flex-shrink: 0;
 }
 .choice-text { padding-top: 3px; }
 
-.choice-btn.correct {
-  border-color: var(--green);
-  background: rgba(16,185,129,0.15);
-}
+.choice-btn.correct { border-color: var(--green); background: rgba(16,185,129,0.15); }
 .choice-btn.correct .choice-label { background: var(--green); color: #fff; }
-.choice-btn.incorrect {
-  border-color: var(--red);
-  background: rgba(239,68,68,0.15);
-}
+.choice-btn.incorrect { border-color: var(--red); background: rgba(239,68,68,0.15); }
 .choice-btn.incorrect .choice-label { background: var(--red); color: #fff; }
-.choice-btn.show-correct {
-  border-color: var(--green);
-  background: rgba(16,185,129,0.1);
-}
+.choice-btn.show-correct { border-color: var(--green); background: rgba(16,185,129,0.1); }
 
-/* ===== RESULT (per question) ===== */
-.result-box {
-  margin-top: 16px;
-  padding: 16px;
-  border-radius: 12px;
+.submit-btn {
+  width: 100%; padding: 14px; border-radius: 12px; border: none;
+  font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 16px;
+  background: var(--accent); color: #fff; transition: all 0.15s;
   display: none;
 }
+.submit-btn.show { display: block; }
+.submit-btn:hover { background: var(--accent-hover); }
+.submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.result-box {
+  margin-top: 16px; padding: 16px; border-radius: 12px; display: none;
+}
 .result-box.show { display: block; }
-.result-box.correct-result {
-  background: rgba(16,185,129,0.1);
-  border: 1px solid rgba(16,185,129,0.3);
-}
-.result-box.incorrect-result {
-  background: rgba(239,68,68,0.1);
-  border: 1px solid rgba(239,68,68,0.3);
-}
-.result-icon {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-.result-explanation {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--text-sub);
-  margin-top: 8px;
-}
+.result-box.correct-result { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); }
+.result-box.incorrect-result { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); }
+.result-icon { font-size: 1.5rem; margin-bottom: 8px; }
+.result-explanation { font-size: 0.85rem; line-height: 1.6; color: var(--text-sub); margin-top: 8px; }
 
 .next-btn, .copy-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 12px;
-  transition: all 0.15s;
+  width: 100%; padding: 14px; border-radius: 12px; border: none;
+  font-size: 1rem; font-weight: 700; cursor: pointer; margin-top: 12px; transition: all 0.15s;
 }
-.next-btn {
-  background: var(--accent);
-  color: #fff;
-}
+.next-btn { background: var(--accent); color: #fff; }
 .next-btn:hover { background: var(--accent-hover); }
 .copy-btn {
-  background: rgba(255,255,255,0.1);
-  color: var(--text);
-  border: 1px solid rgba(255,255,255,0.2);
-  font-size: 0.85rem;
+  background: rgba(255,255,255,0.1); color: var(--text);
+  border: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem;
 }
 .copy-btn:active { background: rgba(255,255,255,0.2); }
-.copy-btn.copied {
-  background: rgba(16,185,129,0.2);
-  border-color: var(--green);
-  color: var(--green);
-}
+.copy-btn.copied { background: rgba(16,185,129,0.2); border-color: var(--green); color: var(--green); }
 
-/* ===== SUMMARY SCREEN ===== */
-.summary-hero {
-  text-align: center;
-  padding: 40px 20px;
-}
-.summary-score {
-  font-size: 4rem;
-  font-weight: 800;
-}
+.summary-hero { text-align: center; padding: 40px 20px; }
+.summary-score { font-size: 4rem; font-weight: 800; }
 .summary-score.great { color: var(--green); }
 .summary-score.good { color: var(--teal); }
 .summary-score.needs-work { color: var(--orange); }
 .summary-score.poor { color: var(--red); }
-.summary-label {
-  font-size: 1rem;
-  color: var(--text-sub);
-  margin-top: 4px;
-}
-.summary-detail {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-top: 20px;
-}
+.summary-label { font-size: 1rem; color: var(--text-sub); margin-top: 4px; }
+.summary-detail { display: flex; justify-content: center; gap: 32px; margin-top: 20px; }
 .summary-detail-item { text-align: center; }
-.summary-detail-num {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.summary-detail-label {
-  font-size: 0.75rem;
-  color: var(--text-sub);
-}
+.summary-detail-num { font-size: 1.5rem; font-weight: 700; }
+.summary-detail-label { font-size: 0.75rem; color: var(--text-sub); }
 
-.summary-questions { margin-top: 24px; }
 .summary-q-item {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  background: var(--card); border-radius: 12px; padding: 14px 16px;
+  margin-bottom: 8px; display: flex; align-items: flex-start; gap: 12px;
 }
 .summary-q-icon { font-size: 1.2rem; flex-shrink: 0; padding-top: 2px; }
-.summary-q-text {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  flex: 1;
-}
+.summary-q-text { font-size: 0.85rem; line-height: 1.5; flex: 1; }
 .summary-q-copy {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: var(--text-sub);
-  font-size: 0.7rem;
-  padding: 4px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: all 0.15s;
+  background: none; border: 1px solid rgba(255,255,255,0.2); color: var(--text-sub);
+  font-size: 0.7rem; padding: 4px 10px; border-radius: 6px; cursor: pointer;
+  white-space: nowrap; flex-shrink: 0; transition: all 0.15s;
 }
-.summary-q-copy:active {
-  background: rgba(16,185,129,0.2);
-  border-color: var(--green);
-  color: var(--green);
-}
+.summary-q-copy:active { background: rgba(16,185,129,0.2); border-color: var(--green); color: var(--green); }
 
-/* ===== ACTION BUTTONS ===== */
-.action-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 24px;
-}
+.action-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
 .btn-primary {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.15s;
+  background: var(--accent); color: #fff; border: none; padding: 16px;
+  border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.15s;
 }
 .btn-primary:hover { background: var(--accent-hover); }
 .btn-secondary {
-  background: rgba(255,255,255,0.08);
-  color: var(--text);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 14px;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
+  background: rgba(255,255,255,0.08); color: var(--text);
+  border: 1px solid rgba(255,255,255,0.15); padding: 14px; border-radius: 12px;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.15s;
 }
 .btn-secondary:hover { background: rgba(255,255,255,0.12); }
 
-/* ===== MODE SELECT ===== */
 .mode-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
 .mode-card {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 20px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.15s;
+  background: var(--card); border-radius: 12px; padding: 20px; cursor: pointer;
+  border: 2px solid transparent; transition: all 0.15s;
 }
 .mode-card:hover { border-color: var(--accent); }
 .mode-card:active { transform: scale(0.98); }
 .mode-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
 .mode-card p { font-size: 0.8rem; color: var(--text-sub); line-height: 1.4; }
 
-/* ===== NO DATA ===== */
-.no-data {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-sub);
-}
+.no-data { text-align: center; padding: 40px 20px; color: var(--text-sub); }
 .no-data-icon { font-size: 3rem; margin-bottom: 12px; }
 .no-data p { font-size: 0.9rem; line-height: 1.6; }
 
-/* ===== TOAST ===== */
 .toast {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
+  position: fixed; bottom: 30px; left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background: var(--card);
-  color: var(--text);
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-  z-index: 200;
-  transition: transform 0.3s ease;
-  pointer-events: none;
+  background: var(--card); color: var(--text); padding: 12px 24px;
+  border-radius: 12px; font-size: 0.85rem; font-weight: 600;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4); z-index: 200;
+  transition: transform 0.3s ease; pointer-events: none;
 }
-.toast.show {
-  transform: translateX(-50%) translateY(0);
-}
+.toast.show { transform: translateX(-50%) translateY(0); }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .fade-in { animation: fadeIn 0.3s ease forwards; }
 
-/* ===== RESET BUTTON ===== */
-.reset-area {
-  margin-top: 40px;
-  text-align: center;
-}
+.reset-area { margin-top: 40px; text-align: center; }
 .reset-btn {
-  background: none;
-  border: 1px solid rgba(239,68,68,0.3);
-  color: var(--red);
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  cursor: pointer;
+  background: none; border: 1px solid rgba(239,68,68,0.3); color: var(--red);
+  padding: 10px 20px; border-radius: 8px; font-size: 0.8rem; cursor: pointer;
 }
 .reset-btn:hover { background: rgba(239,68,68,0.1); }
 
-/* Confirm dialog */
 .overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 300;
-  align-items: center;
-  justify-content: center;
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 300; align-items: center; justify-content: center;
 }
 .overlay.show { display: flex; }
 .dialog {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 24px;
-  margin: 20px;
-  max-width: 320px;
-  width: 100%;
-  text-align: center;
+  background: var(--card); border-radius: 16px; padding: 24px; margin: 20px;
+  max-width: 320px; width: 100%; text-align: center;
 }
 .dialog h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .dialog p { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 20px; line-height: 1.5; }
 .dialog-btns { display: flex; gap: 10px; }
 .dialog-btns button {
-  flex: 1;
-  padding: 12px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
+  flex: 1; padding: 12px; border-radius: 10px; font-size: 0.9rem;
+  font-weight: 600; cursor: pointer; border: none;
 }
 .dialog-cancel { background: rgba(255,255,255,0.1); color: var(--text); }
 .dialog-confirm { background: var(--red); color: #fff; }
+
+.loading {
+  text-align: center; padding: 60px 20px; color: var(--text-sub);
+}
+.loading-spinner {
+  width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.1);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.8s linear infinite; margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
   <h1>G検定 学習アプリ</h1>
   <div class="header-sub">JDLA Deep Learning for GENERAL</div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- RESET CONFIRM DIALOG -->
 <div class="overlay" id="resetOverlay">
   <div class="dialog">
     <h3>データをリセット</h3>
@@ -556,11 +318,9 @@ body {
   </div>
 </div>
 
-<!-- ===== SCREEN: TOP ===== -->
 <div class="screen active" id="topScreen">
   <div id="overallStats"></div>
   <div id="chapterAnalysis"></div>
-
   <div class="section-title">学習を始める</div>
   <div class="mode-cards">
     <div class="mode-card" onclick="showChapterSelect('normal')">
@@ -576,13 +336,11 @@ body {
       <p>全範囲からランダムに出題</p>
     </div>
   </div>
-
   <div class="reset-area">
     <button class="reset-btn" onclick="showResetDialog()">学習データをリセット</button>
   </div>
 </div>
 
-<!-- ===== SCREEN: CHAPTER SELECT ===== -->
 <div class="screen" id="chapterSelectScreen">
   <div class="section-title">
     <span onclick="goTop()" style="cursor:pointer;">←</span>
@@ -591,7 +349,6 @@ body {
   <div id="chapterList"></div>
 </div>
 
-<!-- ===== SCREEN: QUIZ ===== -->
 <div class="screen" id="quizScreen">
   <div class="quiz-progress">
     <span onclick="confirmQuit()" style="cursor:pointer;font-size:1.2rem;">←</span>
@@ -603,278 +360,37 @@ body {
   <div id="quizContent"></div>
 </div>
 
-<!-- ===== SCREEN: SUMMARY ===== -->
 <div class="screen" id="summaryScreen">
   <div id="summaryContent"></div>
 </div>
 
+<!-- 外部問題データ読み込み -->
+<script src="questions.js"></script>
+
 <script>
-// ===== QUESTION DATA =====
-// G検定シラバス2024改訂版準拠 - ダミーデータ（各章3-5問）
-const QUESTIONS = [
-  // --- 第1章: 人工知能(AI)とは ---
-  {
-    id: 1, chapter: 1, chapterName: "人工知能（AI）とは",
-    question: "第1次AIブーム（1950年代後半〜1960年代）の中心技術として最も適切なものはどれか。",
-    choices: ["知識表現とエキスパートシステム", "推論と探索", "機械学習とディープラーニング", "生成AIと大規模言語モデル"],
-    correct: 1,
-    explanation: "第1次AIブームでは「推論・探索」が中心技術でした。迷路問題やパズルの解法が研究されましたが、トイ・プロブレム（簡略化された問題）しか解けないという限界がありました。"
-  },
-  {
-    id: 2, chapter: 1, chapterName: "人工知能（AI）とは",
-    question: "「AIが新たな成果を達成すると、その原理が解明された瞬間に『それは真の知能ではない』と見なされる心理現象」を何と呼ぶか。",
-    choices: ["フレーム問題", "シンボルグラウンディング問題", "AI効果", "中国語の部屋"],
-    correct: 2,
-    explanation: "AI効果とは、AIが何かを達成しても「それは本当の知能ではない」と評価が変わる現象です。チェスや将棋AIでも見られました。"
-  },
-  {
-    id: 3, chapter: 1, chapterName: "人工知能（AI）とは",
-    question: "第2次AIブームにおける「知識獲得のボトルネック」とは何を指すか。",
-    choices: ["コンピュータの計算速度が遅すぎること", "知識をすべて人手で入力する必要がありコストが膨大であること", "インターネットが普及していなかったこと", "ディープラーニングがまだ発明されていなかったこと"],
-    correct: 1,
-    explanation: "第2次AIブームのエキスパートシステムでは、専門家の知識をすべて手動でルール化する必要があり、そのコストが膨大で実用範囲が限定されました。"
-  },
-  {
-    id: 4, chapter: 1, chapterName: "人工知能（AI）とは",
-    question: "1956年に「人工知能（Artificial Intelligence）」という用語を初めて使用した会議はどれか。",
-    choices: ["チューリング会議", "ダートマス会議", "IEEE国際会議", "NeurIPS"],
-    correct: 1,
-    explanation: "1956年のダートマス会議で、ジョン・マッカーシーらが「Artificial Intelligence」という用語を提唱しました。これがAI研究の出発点とされています。"
-  },
+// ===== questions.js が読み込めなかった場合のフォールバック =====
+if (typeof QUESTIONS === 'undefined') {
+  var QUESTIONS = [
+    {
+      id: 1, chapter: 1, chapterName: "人工知能（AI）とは",
+      question: "サンプル問題：第1次AIブーム（1950年代後半〜1960年代）の中心技術として最も適切なものはどれか。",
+      choices: ["知識表現とエキスパートシステム", "推論と探索", "機械学習とディープラーニング", "生成AIと大規模言語モデル"],
+      correct: [1],
+      explanation: "第1次AIブームでは「推論・探索」が中心技術でした。これはサンプル問題です。questions.jsに問題データを追加してください。"
+    }
+  ];
+}
 
-  // --- 第2章: 人工知能をめぐる動向 ---
-  {
-    id: 5, chapter: 2, chapterName: "人工知能をめぐる動向",
-    question: "2012年にImageNetの画像認識コンペティション(ILSVRC)で圧倒的な成績を収め、ディープラーニングブームの火付け役となったモデルはどれか。",
-    choices: ["VGGNet", "AlexNet", "GoogLeNet", "ResNet"],
-    correct: 1,
-    explanation: "AlexNet（2012年）がILSVRCで従来手法を大きく上回る成績を収め、ディープラーニング（深層学習）への注目が一気に高まりました。"
-  },
-  {
-    id: 6, chapter: 2, chapterName: "人工知能をめぐる動向",
-    question: "AlphaGoが世界トップクラスの囲碁棋士に勝利した際に用いられた主な技術の組み合わせとして正しいものはどれか。",
-    choices: ["エキスパートシステムとルールベース", "ディープラーニングと強化学習", "サポートベクターマシンと決定木", "遺伝的アルゴリズムとベイズ推定"],
-    correct: 1,
-    explanation: "Google DeepMindのAlphaGoは、CNNによる局面評価（ディープラーニング）と、モンテカルロ木探索を組み合わせた強化学習を使って人間のトップ棋士を破りました。"
-  },
-  {
-    id: 7, chapter: 2, chapterName: "人工知能をめぐる動向",
-    question: "特化型AI（Narrow AI）と汎用AI（AGI）の説明として最も適切なものはどれか。",
-    choices: [
-      "特化型AIは複数のタスクを同時にこなせるが、汎用AIは1つのタスクに特化する",
-      "現在実用化されているAIはすべて特化型AIであり、汎用AIはまだ実現していない",
-      "汎用AIはすでにChatGPTによって実現された",
-      "特化型AIと汎用AIに本質的な違いはない"
-    ],
-    correct: 1,
-    explanation: "現在のAIはすべて特化型AI（Narrow AI）です。人間のように多様なタスクをこなせる汎用AI（AGI: Artificial General Intelligence）はまだ実現していません。"
-  },
+// ===== CHAPTERS（問題データから自動生成） =====
+function getChapters() {
+  const chapters = {};
+  QUESTIONS.forEach(q => {
+    if (!chapters[q.chapter]) chapters[q.chapter] = q.chapterName;
+  });
+  return chapters;
+}
 
-  // --- 第3章: 機械学習の具体的手法 ---
-  {
-    id: 8, chapter: 3, chapterName: "機械学習の具体的手法",
-    question: "教師あり学習、教師なし学習、強化学習の説明として正しいものはどれか。",
-    choices: [
-      "教師あり学習は正解ラベル付きデータで学習し、教師なし学習はラベルなしデータから構造を発見する",
-      "教師なし学習は教師あり学習よりも精度が高い",
-      "強化学習には必ず正解ラベルが必要である",
-      "教師あり学習ではクラスタリングが主なタスクである"
-    ],
-    correct: 0,
-    explanation: "教師あり学習は正解ラベル付きデータで学習（分類・回帰）、教師なし学習はラベルなしデータから構造を発見（クラスタリング・次元削減）、強化学習は報酬を最大化する行動を学習します。"
-  },
-  {
-    id: 9, chapter: 3, chapterName: "機械学習の具体的手法",
-    question: "過学習（Overfitting）の対策として適切でないものはどれか。",
-    choices: ["正則化（L1/L2）を適用する", "訓練データの量を増やす", "モデルの複雑さを増大させる", "ドロップアウトを使用する"],
-    correct: 2,
-    explanation: "過学習はモデルが訓練データに過度に適合する現象です。モデルの複雑さを増大させると過学習が悪化します。正則化、データ拡張、ドロップアウト、早期終了などが有効な対策です。"
-  },
-  {
-    id: 10, chapter: 3, chapterName: "機械学習の具体的手法",
-    question: "混同行列においてTP=80, FP=20, FN=10, TN=90のとき、適合率（Precision）はいくつか。",
-    choices: ["80%", "89%", "約73%", "約67%"],
-    correct: 0,
-    explanation: "適合率 = TP / (TP + FP) = 80 / (80 + 20) = 80%。適合率は「陽性と予測したもののうち、実際に陽性だった割合」を示します。"
-  },
-
-  // --- 第4章: ディープラーニングの概要 ---
-  {
-    id: 11, chapter: 4, chapterName: "ディープラーニングの概要",
-    question: "畳み込みニューラルネットワーク（CNN）の構成要素として適切でないものはどれか。",
-    choices: ["畳み込み層", "プーリング層", "忘却ゲート", "全結合層"],
-    correct: 2,
-    explanation: "忘却ゲートはLSTM（Long Short-Term Memory）の構成要素です。CNNは畳み込み層、プーリング層、全結合層で構成されます。"
-  },
-  {
-    id: 12, chapter: 4, chapterName: "ディープラーニングの概要",
-    question: "ResNet（2015年）が深いネットワークの学習を可能にした技術的要因はどれか。",
-    choices: ["大規模なフィルターサイズの採用", "残差接続（Skip Connection）の導入", "プーリング層の廃止", "全結合層のみで構成"],
-    correct: 1,
-    explanation: "ResNetは残差接続（Skip Connection）を導入することで、勾配消失問題を緩和し、100層を超える非常に深いネットワークの学習を可能にしました。"
-  },
-  {
-    id: 13, chapter: 4, chapterName: "ディープラーニングの概要",
-    question: "RNNの勾配消失問題を解決するために開発されたアーキテクチャはどれか。",
-    choices: ["AlexNet", "LSTM", "VGG", "U-Net"],
-    correct: 1,
-    explanation: "LSTM（Long Short-Term Memory）はセルと3つのゲート（入力・忘却・出力）を持ち、長期的な依存関係の学習を可能にしました。"
-  },
-
-  // --- 第5章: ディープラーニングの手法 ---
-  {
-    id: 14, chapter: 5, chapterName: "ディープラーニングの手法",
-    question: "Transformerアーキテクチャの特徴として最も適切なものはどれか。",
-    choices: [
-      "RNNをベースにした逐次処理モデルである",
-      "Attention機構を用いた並列処理が可能なモデルである",
-      "CNNを自然言語処理に応用したモデルである",
-      "強化学習専用に設計されたモデルである"
-    ],
-    correct: 1,
-    explanation: "Transformer（2017年、Google「Attention is All You Need」）はSelf-Attention機構を用い、RNNを使わず並列処理が可能です。現在のLLMの基盤技術です。"
-  },
-  {
-    id: 15, chapter: 5, chapterName: "ディープラーニングの手法",
-    question: "BERT（Bidirectional Encoder Representations from Transformers）の特徴として正しいものはどれか。",
-    choices: [
-      "文章を左から右への一方向のみで処理する",
-      "双方向の文脈を考慮してテキストを理解する",
-      "画像生成に特化したモデルである",
-      "強化学習で訓練される"
-    ],
-    correct: 1,
-    explanation: "BERTは双方向（Bidirectional）のTransformerエンコーダを使い、文脈の前後両方から単語の意味を理解します。これにより自然言語理解タスクで画期的な成果を上げました。"
-  },
-
-  // --- 第6章: 生成AI ---
-  {
-    id: 16, chapter: 6, chapterName: "生成AI",
-    question: "LLM（大規模言語モデル）が事実と異なる情報をもっともらしく生成する現象を何と呼ぶか。",
-    choices: ["過学習", "バイアス", "ハルシネーション", "ドリフト"],
-    correct: 2,
-    explanation: "ハルシネーション（Hallucination）は、LLMが事実に基づかない情報をもっともらしく生成してしまう現象です。LLMの重要な課題の一つです。"
-  },
-  {
-    id: 17, chapter: 6, chapterName: "生成AI",
-    question: "RAG（Retrieval-Augmented Generation）の説明として最も適切なものはどれか。",
-    choices: [
-      "モデルを一から再訓練する手法",
-      "外部データを検索・参照してLLMの回答精度を高める手法",
-      "画像から文章を生成する手法",
-      "モデルのパラメータ数を削減する手法"
-    ],
-    correct: 1,
-    explanation: "RAG（検索拡張生成）は、社内文書やデータベースなどの外部情報を検索し、その結果をLLMに渡して回答を生成させる手法です。ハルシネーション軽減に有効です。"
-  },
-  {
-    id: 18, chapter: 6, chapterName: "生成AI",
-    question: "RLHF（Reinforcement Learning from Human Feedback）の目的として最も適切なものはどれか。",
-    choices: [
-      "モデルの計算速度を向上させる",
-      "人間のフィードバックを用いてモデルの出力を人間の期待に沿わせる",
-      "画像認識の精度を上げる",
-      "学習データの量を削減する"
-    ],
-    correct: 1,
-    explanation: "RLHFは人間のフィードバック（好みの判定）を報酬として強化学習を行い、モデルの出力を人間の意図や価値観に合わせる手法です。ChatGPTなどで使われています。"
-  },
-
-  // --- 第7章: AIの社会実装・運用 ---
-  {
-    id: 19, chapter: 7, chapterName: "AIの社会実装・運用",
-    question: "AIプロジェクトにおいて、導入後にモデルの精度が時間とともに低下する現象を何と呼ぶか。",
-    choices: ["過学習", "データドリフト", "正則化", "バッチ正規化"],
-    correct: 1,
-    explanation: "データドリフトとは、運用中にデータの分布が学習時と変化し、モデルの精度が低下する現象です。定期的なモニタリングと再学習が必要です。"
-  },
-  {
-    id: 20, chapter: 7, chapterName: "AIの社会実装・運用",
-    question: "MLOpsの説明として最も適切なものはどれか。",
-    choices: [
-      "機械学習モデルの開発・運用・監視を効率化するための手法・仕組み",
-      "機械学習のアルゴリズムを高速化する技術",
-      "データベースの運用管理手法",
-      "AIの倫理ガイドラインの策定プロセス"
-    ],
-    correct: 0,
-    explanation: "MLOpsはDevOpsの考え方を機械学習に適用し、モデルの開発・デプロイ・監視・再学習のライフサイクルを効率的に管理するための手法・仕組みです。"
-  },
-
-  // --- 第8章: 数理・統計 ---
-  {
-    id: 21, chapter: 8, chapterName: "数理・統計",
-    question: "確率分布において、平均値を中心に左右対称なベル型の分布を何と呼ぶか。",
-    choices: ["ポアソン分布", "正規分布（ガウス分布）", "一様分布", "ベルヌーイ分布"],
-    correct: 1,
-    explanation: "正規分布（ガウス分布）は平均値を中心に左右対称なベル型のカーブを描く連続確率分布で、自然界の多くの現象を近似できます。"
-  },
-  {
-    id: 22, chapter: 8, chapterName: "数理・統計",
-    question: "ベイズの定理の説明として最も適切なものはどれか。",
-    choices: [
-      "サンプルサイズが大きくなると標本平均が母平均に近づく",
-      "事前確率と尤度から事後確率を求める定理",
-      "2つの変数の相関関係を表す指標",
-      "データの分散を最小にする手法"
-    ],
-    correct: 1,
-    explanation: "ベイズの定理は、事前確率（事前の信念）に観測データ（尤度）を掛け合わせて事後確率（更新された信念）を計算する定理です。スパムフィルタなどに応用されます。"
-  },
-
-  // --- 第9章: AI法律・倫理・社会問題 ---
-  {
-    id: 23, chapter: 9, chapterName: "AI法律・倫理・社会問題",
-    question: "EU AI規制法（AI Act）で採用されているアプローチはどれか。",
-    choices: [
-      "すべてのAIを一律に規制する",
-      "リスクベースのアプローチで段階的に規制する",
-      "AI開発を全面的に禁止する",
-      "企業の自主規制に完全に委ねる"
-    ],
-    correct: 1,
-    explanation: "EU AI規制法はリスクベースのアプローチを採用し、許容できないリスク（禁止）、ハイリスク（厳格な要件）、限定リスク（透明性義務）、最小リスク（規制なし）の4段階で規制します。"
-  },
-  {
-    id: 24, chapter: 9, chapterName: "AI法律・倫理・社会問題",
-    question: "日本の著作権法第30条の4に関する説明として最も適切なものはどれか。",
-    choices: [
-      "AIが生成した著作物はすべて著作権で保護される",
-      "情報解析目的であれば著作物を許諾なく利用できる場合がある",
-      "AIの学習にはすべて著作権者の許諾が必要",
-      "著作権法はAIに一切適用されない"
-    ],
-    correct: 1,
-    explanation: "著作権法第30条の4は「情報解析」等の非享受利用であれば、著作権者の許諾なく著作物を利用できるとする規定です。AI学習データの利用における重要な条文です。"
-  },
-  {
-    id: 25, chapter: 9, chapterName: "AI法律・倫理・社会問題",
-    question: "説明可能AI（XAI）の手法であるLIMEの特徴として正しいものはどれか。",
-    choices: [
-      "モデル全体の構造を完全に可視化する",
-      "個々の予測について、局所的に解釈可能な近似モデルで説明する",
-      "モデルの学習速度を向上させる手法",
-      "データの異常値を検出する手法"
-    ],
-    correct: 1,
-    explanation: "LIME（Local Interpretable Model-agnostic Explanations）は、個々の予測の近傍を局所的に近似する解釈可能なモデルを作り、予測の根拠を説明する手法です。"
-  }
-];
-
-// ===== CHAPTER DEFINITIONS =====
-const CHAPTERS = {
-  1: "人工知能（AI）とは",
-  2: "人工知能をめぐる動向",
-  3: "機械学習の具体的手法",
-  4: "ディープラーニングの概要",
-  5: "ディープラーニングの手法",
-  6: "生成AI",
-  7: "AIの社会実装・運用",
-  8: "数理・統計",
-  9: "AI法律・倫理・社会問題"
-};
-
-const LABELS = ['A', 'B', 'C', 'D'];
+const LABELS = ['A','B','C','D','E','F','G','H'];
 
 // ===== STATE =====
 let progress = loadProgress();
@@ -882,8 +398,9 @@ let currentQuiz = [];
 let currentIndex = 0;
 let quizResults = [];
 let currentMode = 'normal';
+let selectedChoices = new Set();
+let isMultiSelect = false;
 
-// ===== LOCAL STORAGE =====
 function loadProgress() {
   try {
     const data = localStorage.getItem('gTestProgress');
@@ -900,17 +417,10 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
-
-function goTop() {
-  renderTop();
-  showScreen('topScreen');
-}
+function goTop() { renderTop(); showScreen('topScreen'); }
 
 // ===== TOP SCREEN =====
-function renderTop() {
-  renderOverallStats();
-  renderChapterAnalysis();
-}
+function renderTop() { renderOverallStats(); renderChapterAnalysis(); }
 
 function renderOverallStats() {
   const el = document.getElementById('overallStats');
@@ -919,18 +429,14 @@ function renderOverallStats() {
     el.innerHTML = `
       <div class="no-data fade-in">
         <div class="no-data-icon">📚</div>
-        <p>まだ問題を解いていません。<br>下のメニューから学習を始めましょう！</p>
+        <p>まだ問題を解いていません。<br>下のメニューから学習を始めましょう！<br><br>
+        <span style="font-size:0.75rem;color:var(--text-sub)">全${QUESTIONS.length}問収録</span></p>
       </div>`;
     return;
   }
-
   let totalCorrect = 0, totalCount = 0;
-  allAnswered.forEach(qid => {
-    totalCount++;
-    if (progress[qid].correct) totalCorrect++;
-  });
+  allAnswered.forEach(qid => { totalCount++; if (progress[qid].correct) totalCorrect++; });
   const rate = Math.round((totalCorrect / totalCount) * 100);
-
   el.innerHTML = `
     <div class="overall-stats fade-in">
       <div class="overall-rate">${rate}%</div>
@@ -938,7 +444,7 @@ function renderOverallStats() {
       <div class="overall-detail">
         <span>正解 ${totalCorrect}問</span>
         <span>不正解 ${totalCount - totalCorrect}問</span>
-        <span>合計 ${totalCount}問</span>
+        <span>合計 ${totalCount}/${QUESTIONS.length}問</span>
       </div>
     </div>`;
 }
@@ -946,12 +452,8 @@ function renderOverallStats() {
 function renderChapterAnalysis() {
   const el = document.getElementById('chapterAnalysis');
   const allAnswered = Object.keys(progress);
-  if (allAnswered.length === 0) {
-    el.innerHTML = '';
-    return;
-  }
+  if (allAnswered.length === 0) { el.innerHTML = ''; return; }
 
-  // Calc chapter stats
   const stats = {};
   allAnswered.forEach(qid => {
     const q = QUESTIONS.find(q => q.id === parseInt(qid));
@@ -963,7 +465,6 @@ function renderChapterAnalysis() {
     else stats[ch].incorrect++;
   });
 
-  // Sort by rate ascending (worst first)
   const sorted = Object.entries(stats).map(([ch, s]) => {
     s.rate = Math.round((s.correct / s.total) * 100);
     s.chapter = ch;
@@ -974,38 +475,35 @@ function renderChapterAnalysis() {
   sorted.forEach((s, i) => {
     const cls = s.rate >= 80 ? 'excellent' : s.rate >= 60 ? 'good' : s.rate >= 40 ? 'needs-work' : 'weak';
     const label = s.rate >= 80 ? '優秀' : s.rate >= 60 ? '良好' : s.rate >= 40 ? '要改善' : '苦手';
+    const chapterTotal = QUESTIONS.filter(q => q.chapter === parseInt(s.chapter)).length;
     html += `
-      <div class="chapter-card ${cls} fade-in" style="animation-delay:${i * 0.05}s">
+      <div class="chapter-card ${cls} fade-in" style="animation-delay:${i*0.05}s">
         <div class="chapter-header">
           <div class="chapter-name">第${s.chapter}章: ${s.name}<span class="badge ${cls}">${label}</span></div>
           <div class="chapter-rate">${s.rate}%</div>
         </div>
-        <div class="chapter-detail">正解: ${s.correct}問　不正解: ${s.incorrect}問　合計: ${s.total}問</div>
+        <div class="chapter-detail">正解: ${s.correct}問　不正解: ${s.incorrect}問　（${s.total}/${chapterTotal}問 回答済）</div>
         <div class="progress-bar"><div class="progress-fill" style="width:${s.rate}%"></div></div>
       </div>`;
   });
-
   el.innerHTML = html;
 }
 
 // ===== CHAPTER SELECT =====
 function showChapterSelect(mode) {
   currentMode = mode;
+  if (mode === 'all') { startQuiz(QUESTIONS.slice()); return; }
   const el = document.getElementById('chapterList');
-
-  if (mode === 'all') {
-    startQuiz(QUESTIONS.slice());
-    return;
-  }
-
+  const chapters = getChapters();
   let html = '';
-  Object.entries(CHAPTERS).forEach(([ch, name]) => {
+  Object.entries(chapters).forEach(([ch, name]) => {
     const qs = QUESTIONS.filter(q => q.chapter === parseInt(ch));
+    const answered = qs.filter(q => progress[q.id]).length;
     html += `
       <div class="chapter-select-card fade-in" onclick="startChapterQuiz(${ch})">
         <div class="chapter-select-info">
           <h3>第${ch}章: ${name}</h3>
-          <p>${qs.length}問</p>
+          <p>${qs.length}問（${answered}問 回答済）</p>
         </div>
         <div class="chapter-select-arrow">›</div>
       </div>`;
@@ -1015,26 +513,19 @@ function showChapterSelect(mode) {
 }
 
 function startChapterQuiz(chapter) {
-  const qs = QUESTIONS.filter(q => q.chapter === chapter);
-  startQuiz(qs);
+  startQuiz(QUESTIONS.filter(q => q.chapter === chapter));
 }
 
 function startReviewMode() {
-  const wrongIds = Object.entries(progress)
-    .filter(([_, v]) => !v.correct)
-    .map(([id, _]) => parseInt(id));
+  const wrongIds = Object.entries(progress).filter(([_,v]) => !v.correct).map(([id,_]) => parseInt(id));
   const qs = QUESTIONS.filter(q => wrongIds.includes(q.id));
-  if (qs.length === 0) {
-    showToast('復習する問題がありません');
-    return;
-  }
+  if (qs.length === 0) { showToast('復習する問題がありません'); return; }
   currentMode = 'review';
   startQuiz(qs);
 }
 
 // ===== QUIZ =====
 function startQuiz(questions) {
-  // Shuffle
   currentQuiz = questions.sort(() => Math.random() - 0.5);
   currentIndex = 0;
   quizResults = [];
@@ -1045,65 +536,104 @@ function startQuiz(questions) {
 function renderQuestion() {
   const q = currentQuiz[currentIndex];
   const total = currentQuiz.length;
-  document.getElementById('quizProgressFill').style.width = `${((currentIndex) / total) * 100}%`;
-  document.getElementById('quizProgressText').textContent = `${currentIndex + 1}/${total}`;
+  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  isMultiSelect = correctArr.length > 1;
+  selectedChoices = new Set();
+
+  document.getElementById('quizProgressFill').style.width = `${(currentIndex/total)*100}%`;
+  document.getElementById('quizProgressText').textContent = `${currentIndex+1}/${total}`;
 
   let choicesHtml = '';
   q.choices.forEach((c, i) => {
     choicesHtml += `
-      <button class="choice-btn" id="choice${i}" onclick="selectAnswer(${i})">
+      <button class="choice-btn" id="choice${i}" onclick="${isMultiSelect ? `toggleChoice(${i})` : `selectSingleAnswer(${i})`}">
         <span class="choice-label">${LABELS[i]}</span>
         <span class="choice-text">${c}</span>
       </button>`;
   });
 
+  const typeTag = isMultiSelect ? `<div class="question-type">複数選択（${correctArr.length}つ選択）</div>` : '';
+
   document.getElementById('quizContent').innerHTML = `
     <div class="question-card fade-in">
       <div class="question-number">第${q.chapter}章: ${q.chapterName}</div>
       <div class="question-text">${q.question}</div>
+      ${typeTag}
     </div>
-    <div class="choices fade-in" style="animation-delay:0.1s">
-      ${choicesHtml}
-    </div>
+    <div class="choices fade-in" style="animation-delay:0.1s">${choicesHtml}</div>
+    <button class="submit-btn" id="submitBtn" onclick="submitMultiAnswer()" disabled>回答を確定する</button>
     <div class="result-box" id="resultBox">
       <div class="result-icon" id="resultIcon"></div>
       <div class="result-explanation" id="resultExplanation"></div>
       <button class="copy-btn" id="copyBtn" onclick="copyQuestion()">問題と解説をコピー（AI壁打ち用）</button>
       <button class="next-btn" id="nextBtn" onclick="nextQuestion()">次の問題へ</button>
     </div>`;
+
+  if (isMultiSelect) {
+    document.getElementById('submitBtn').classList.add('show');
+  }
 }
 
-function selectAnswer(selected) {
-  const q = currentQuiz[currentIndex];
-  const isCorrect = selected === q.correct;
+// 単一選択
+function selectSingleAnswer(selected) {
+  selectedChoices = new Set([selected]);
+  evaluateAnswer();
+}
 
-  // Save progress
+// 複数選択のトグル
+function toggleChoice(idx) {
+  const btn = document.getElementById('choice' + idx);
+  if (selectedChoices.has(idx)) {
+    selectedChoices.delete(idx);
+    btn.classList.remove('selected');
+  } else {
+    selectedChoices.add(idx);
+    btn.classList.add('selected');
+  }
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = selectedChoices.size === 0;
+}
+
+// 複数選択の確定
+function submitMultiAnswer() {
+  evaluateAnswer();
+}
+
+// 回答評価
+function evaluateAnswer() {
+  const q = currentQuiz[currentIndex];
+  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+  const selectedArr = Array.from(selectedChoices).sort();
+  const correctSorted = correctArr.slice().sort();
+  const isCorrect = JSON.stringify(selectedArr) === JSON.stringify(correctSorted);
+
   progress[q.id] = { correct: isCorrect, lastAnswered: Date.now() };
   saveProgress();
+  quizResults.push({ question: q, selected: selectedArr, isCorrect });
 
-  // Record result
-  quizResults.push({ question: q, selected, isCorrect });
+  // ボタンの状態更新
+  if (document.getElementById('submitBtn')) {
+    document.getElementById('submitBtn').style.display = 'none';
+  }
 
-  // Disable all buttons
   document.querySelectorAll('.choice-btn').forEach((btn, i) => {
     btn.onclick = null;
     btn.style.cursor = 'default';
-    if (i === q.correct) {
-      btn.classList.add(isCorrect ? 'correct' : 'show-correct');
-    }
-    if (i === selected && !isCorrect) {
+    if (correctArr.includes(i)) {
+      btn.classList.remove('selected');
+      btn.classList.add(selectedArr.includes(i) ? 'correct' : 'show-correct');
+    } else if (selectedArr.includes(i)) {
+      btn.classList.remove('selected');
       btn.classList.add('incorrect');
     }
   });
 
-  // Show result
   const box = document.getElementById('resultBox');
   box.classList.add('show');
   box.classList.add(isCorrect ? 'correct-result' : 'incorrect-result');
   document.getElementById('resultIcon').textContent = isCorrect ? '⭕ 正解！' : '❌ 不正解';
   document.getElementById('resultExplanation').textContent = q.explanation;
 
-  // Update next button text
   if (currentIndex >= currentQuiz.length - 1) {
     document.getElementById('nextBtn').textContent = '結果を見る';
   }
@@ -1111,17 +641,14 @@ function selectAnswer(selected) {
 
 function nextQuestion() {
   currentIndex++;
-  if (currentIndex >= currentQuiz.length) {
-    showSummary();
-  } else {
-    renderQuestion();
-    window.scrollTo(0, 0);
-  }
+  if (currentIndex >= currentQuiz.length) showSummary();
+  else { renderQuestion(); window.scrollTo(0, 0); }
 }
 
 function copyQuestion() {
   const q = currentQuiz[currentIndex];
-  const selected = quizResults[quizResults.length - 1].selected;
+  const r = quizResults[quizResults.length - 1];
+  const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
   const text = `【G検定 問題】
 第${q.chapter}章: ${q.chapterName}
 
@@ -1129,10 +656,10 @@ function copyQuestion() {
 ${q.question}
 
 ■ 選択肢
-${q.choices.map((c, i) => `${LABELS[i]}. ${c}`).join('\n')}
+${q.choices.map((c,i) => `${LABELS[i]}. ${c}`).join('\n')}
 
-■ 正解: ${LABELS[q.correct]}. ${q.choices[q.correct]}
-■ 自分の回答: ${LABELS[selected]}. ${q.choices[selected]}
+■ 正解: ${correctArr.map(i => LABELS[i]+'. '+q.choices[i]).join(', ')}
+■ 自分の回答: ${r.selected.map(i => LABELS[i]+'. '+q.choices[i]).join(', ')}
 
 ■ 解説
 ${q.explanation}
@@ -1141,33 +668,21 @@ ${q.explanation}
 この問題についてさらに深く理解したいです。関連する概念や実務での応用について教えてください。`;
 
   navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('copyBtn');
-    btn.textContent = 'コピーしました！';
-    btn.classList.add('copied');
+    document.getElementById('copyBtn').textContent = 'コピーしました！';
+    document.getElementById('copyBtn').classList.add('copied');
     showToast('クリップボードにコピーしました');
   }).catch(() => {
-    // Fallback
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const btn = document.getElementById('copyBtn');
-    btn.textContent = 'コピーしました！';
-    btn.classList.add('copied');
+    fallbackCopy(text);
+    document.getElementById('copyBtn').textContent = 'コピーしました！';
+    document.getElementById('copyBtn').classList.add('copied');
     showToast('コピーしました');
   });
 }
 
 function confirmQuit() {
   if (quizResults.length > 0) {
-    if (confirm('学習を中断しますか？ここまでの回答は保存されています。')) {
-      goTop();
-    }
-  } else {
-    goTop();
-  }
+    if (confirm('学習を中断しますか？ここまでの回答は保存されています。')) goTop();
+  } else goTop();
 }
 
 // ===== SUMMARY =====
@@ -1175,22 +690,19 @@ function showSummary() {
   showScreen('summaryScreen');
   const total = quizResults.length;
   const correct = quizResults.filter(r => r.isCorrect).length;
-  const rate = Math.round((correct / total) * 100);
-  const cls = rate >= 80 ? 'great' : rate >= 60 ? 'good' : rate >= 40 ? 'needs-work' : 'poor';
-
+  const rate = Math.round((correct/total)*100);
+  const cls = rate>=80?'great':rate>=60?'good':rate>=40?'needs-work':'poor';
   const wrongResults = quizResults.filter(r => !r.isCorrect);
 
   let wrongHtml = '';
   if (wrongResults.length > 0) {
-    wrongHtml = `<div class="section-title" style="margin-top:32px">間違えた問題</div>`;
-    wrongResults.forEach((r, i) => {
+    wrongHtml = '<div class="section-title" style="margin-top:32px">間違えた問題</div>';
+    wrongResults.forEach((r,i) => {
       const q = r.question;
       wrongHtml += `
-        <div class="summary-q-item fade-in" style="animation-delay:${i * 0.05}s">
+        <div class="summary-q-item fade-in" style="animation-delay:${i*0.05}s">
           <div class="summary-q-icon">❌</div>
-          <div class="summary-q-text">
-            <strong>第${q.chapter}章</strong> ${q.question.substring(0, 60)}...
-          </div>
+          <div class="summary-q-text"><strong>第${q.chapter}章</strong> ${q.question.substring(0,60)}...</div>
           <button class="summary-q-copy" onclick="copySummaryQuestion(${quizResults.indexOf(r)})">コピー</button>
         </div>`;
     });
@@ -1206,7 +718,7 @@ function showSummary() {
           <div class="summary-detail-label">正解</div>
         </div>
         <div class="summary-detail-item">
-          <div class="summary-detail-num" style="color:var(--red)">${total - correct}</div>
+          <div class="summary-detail-num" style="color:var(--red)">${total-correct}</div>
           <div class="summary-detail-label">不正解</div>
         </div>
         <div class="summary-detail-item">
@@ -1216,21 +728,17 @@ function showSummary() {
       </div>
     </div>
     <div class="summary-questions">${wrongHtml}</div>
-    ${wrongResults.length > 0 ? `
-      <button class="btn-secondary" style="margin-top:16px" onclick="copyAllWrong()">
-        間違えた問題をすべてコピー
-      </button>` : ''}
+    ${wrongResults.length>0?`<button class="btn-secondary" style="margin-top:16px" onclick="copyAllWrong()">間違えた問題をすべてコピー</button>`:''}
     <div class="action-btns">
       <button class="btn-primary" onclick="goTop()">トップに戻る</button>
-      ${wrongResults.length > 0 ? `
-        <button class="btn-secondary" onclick="retryWrong()">間違えた問題だけ再挑戦</button>
-      ` : ''}
+      ${wrongResults.length>0?'<button class="btn-secondary" onclick="retryWrong()">間違えた問題だけ再挑戦</button>':''}
     </div>`;
 }
 
 function copySummaryQuestion(idx) {
   const r = quizResults[idx];
   const q = r.question;
+  const correctArr = Array.isArray(q.correct)?q.correct:[q.correct];
   const text = `【G検定 問題】
 第${q.chapter}章: ${q.chapterName}
 
@@ -1238,10 +746,10 @@ function copySummaryQuestion(idx) {
 ${q.question}
 
 ■ 選択肢
-${q.choices.map((c, i) => `${LABELS[i]}. ${c}`).join('\n')}
+${q.choices.map((c,i)=>`${LABELS[i]}. ${c}`).join('\n')}
 
-■ 正解: ${LABELS[q.correct]}. ${q.choices[q.correct]}
-■ 自分の回答: ${LABELS[r.selected]}. ${q.choices[r.selected]}
+■ 正解: ${correctArr.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
+■ 自分の回答: ${r.selected.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
 
 ■ 解説
 ${q.explanation}
@@ -1249,83 +757,55 @@ ${q.explanation}
 ---
 この問題について、なぜ間違えたか分析し、関連する概念を教えてください。`;
 
-  navigator.clipboard.writeText(text).then(() => {
-    showToast('コピーしました');
-  }).catch(() => {
-    fallbackCopy(text);
-    showToast('コピーしました');
-  });
+  navigator.clipboard.writeText(text).then(()=>showToast('コピーしました')).catch(()=>{fallbackCopy(text);showToast('コピーしました');});
 }
 
 function copyAllWrong() {
-  const wrongs = quizResults.filter(r => !r.isCorrect);
+  const wrongs = quizResults.filter(r=>!r.isCorrect);
   let text = '【G検定 間違えた問題まとめ】\n\n';
-  wrongs.forEach((r, i) => {
+  wrongs.forEach((r,i) => {
     const q = r.question;
-    text += `━━━ 問題${i + 1} ━━━
+    const correctArr = Array.isArray(q.correct)?q.correct:[q.correct];
+    text += `━━━ 問題${i+1} ━━━
 第${q.chapter}章: ${q.chapterName}
 
 ■ 問題
 ${q.question}
 
 ■ 選択肢
-${q.choices.map((c, j) => `${LABELS[j]}. ${c}`).join('\n')}
+${q.choices.map((c,j)=>`${LABELS[j]}. ${c}`).join('\n')}
 
-■ 正解: ${LABELS[q.correct]}. ${q.choices[q.correct]}
-■ 自分の回答: ${LABELS[r.selected]}. ${q.choices[r.selected]}
+■ 正解: ${correctArr.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
+■ 自分の回答: ${r.selected.map(i=>LABELS[i]+'. '+q.choices[i]).join(', ')}
 
 ■ 解説
 ${q.explanation}
 
 `;
   });
-  text += `---
-上記の間違えた問題について、共通する弱点パターンを分析し、効率的な復習方法を提案してください。`;
-
-  navigator.clipboard.writeText(text).then(() => {
-    showToast('すべてコピーしました');
-  }).catch(() => {
-    fallbackCopy(text);
-    showToast('コピーしました');
-  });
+  text += `---\n上記の間違えた問題について、共通する弱点パターンを分析し、効率的な復習方法を提案してください。`;
+  navigator.clipboard.writeText(text).then(()=>showToast('すべてコピーしました')).catch(()=>{fallbackCopy(text);showToast('コピーしました');});
 }
 
 function retryWrong() {
-  const wrongQs = quizResults.filter(r => !r.isCorrect).map(r => r.question);
-  startQuiz(wrongQs);
+  startQuiz(quizResults.filter(r=>!r.isCorrect).map(r=>r.question));
 }
 
 // ===== UTILITIES =====
 function fallbackCopy(text) {
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.left = '-9999px';
-  document.body.appendChild(ta);
-  ta.select();
-  document.execCommand('copy');
-  document.body.removeChild(ta);
+  const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';
+  ta.style.left='-9999px';document.body.appendChild(ta);ta.select();
+  document.execCommand('copy');document.body.removeChild(ta);
 }
-
 function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2000);
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2000);
 }
-
-function showResetDialog() {
-  document.getElementById('resetOverlay').classList.add('show');
-}
-function closeResetDialog() {
-  document.getElementById('resetOverlay').classList.remove('show');
-}
-function confirmReset() {
-  progress = {};
-  localStorage.removeItem('gTestProgress');
-  closeResetDialog();
-  showToast('データをリセットしました');
-  goTop();
+function showResetDialog(){document.getElementById('resetOverlay').classList.add('show');}
+function closeResetDialog(){document.getElementById('resetOverlay').classList.remove('show');}
+function confirmReset(){
+  progress={};localStorage.removeItem('gTestProgress');
+  closeResetDialog();showToast('データをリセットしました');goTop();
 }
 
 // ===== INIT =====
@@ -1333,4 +813,3 @@ renderTop();
 </script>
 </body>
 </html>
-
